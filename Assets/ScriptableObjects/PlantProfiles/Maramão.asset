@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380bb27f0796250edbc4806a53049425, type: 3}
   m_Name: "Maram\xE3o"
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 6801394480434634138, guid: 5600a7d7140bed314afcc016a330807e, type: 3}
+  plantSelectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  plantUnselectEvent:
+    m_PersistentCalls:
+      m_Calls: []
