@@ -164,7 +164,6 @@ GameObject:
   m_Component:
   - component: {fileID: 903541724}
   - component: {fileID: 903541723}
-  - component: {fileID: 903541722}
   - component: {fileID: 903541721}
   m_Layer: 0
   m_Name: Grid
@@ -188,20 +187,6 @@ MonoBehaviour:
   tilePrefab: {fileID: 7671870575104709380, guid: 4b7a1416f972475648610c23c099323d, type: 3}
   tilemap: {fileID: 1369004970}
   root: {fileID: 213809466}
---- !u!114 &903541722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903541720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef5cf5b93467dcfdaec2cbf533cb312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 1369004970}
-  grid: {fileID: 903541723}
 --- !u!156049354 &903541723
 Grid:
   m_ObjectHideFlags: 0
@@ -550,6 +535,10 @@ PrefabInstance:
     - target: {fileID: 7671870575104709380, guid: 4b7a1416f972475648610c23c099323d, type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671870575104709380, guid: 4b7a1416f972475648610c23c099323d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
