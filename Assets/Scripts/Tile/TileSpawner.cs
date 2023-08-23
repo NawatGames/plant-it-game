@@ -12,9 +12,9 @@ public class TileSpawner : MonoBehaviour
 
     private void Start()
     {
-        for (int x = -30; x < 30; x++)
+        for (int x = 0; x < 3; x++)
         {
-            for (int y = -30; y < 30; y++)
+            for (int y = 0; y < 3; y++)
             {
                 SpawnTile(new Vector2Int(x, y));
             }

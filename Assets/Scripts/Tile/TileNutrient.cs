@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,24 @@ public class TileNutrient : MonoBehaviour
 
     public void SetAmmount(float ammount)
     {
-        currentAmmount = ammount;
+        currentAmmount = Mathf.Clamp01(ammount);
         AmmountChangedEvent.Invoke(currentAmmount);
     }
 
     public float GetAmmount()
     {
         return currentAmmount;
+    }
+[ContextMenu("Refresh")]
+    private void Refresh()
+    {
+        AmmountChangedEvent.Invoke(currentAmmount);
+    }
+
+    public float speed;
+    private void Update()
+    {
+        var deltaTime = speed * Time.deltaTime;
+        SetAmmount(currentAmmount - deltaTime);
     }
 }
