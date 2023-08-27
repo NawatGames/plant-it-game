@@ -22,7 +22,7 @@ public class PlantStateMachine : MonoBehaviour
         }
     }
 
-    public PlantState GetState()
+    public PlantState GetState() 
     {
         return currentState;
     }
