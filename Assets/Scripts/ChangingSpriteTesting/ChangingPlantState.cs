@@ -17,17 +17,23 @@ namespace ChangingSpriteTesting
         public List<PlantInfo> plantInfos;
         public PlantStateMachine plantStateMachine;
         public PlantLifeStateMachine plantLifeStateMachine;
-
+        
+        private void Awake()
+        {
+            OnPlantStateChanged(plantStateMachine.GetState());
+            OnPlantLifeStateChanged(plantLifeStateMachine.GetState());
+        }
         private void OnEnable()
         {
-            plantStateMachine.StateChangedEvent.AddListener(OnPlantStateChanged);
-            plantLifeStateMachine.StateChangedEvent.AddListener(OnPlantLifeStateChanged);
+            //plantStateMachine.StateChangedEvent.AddListener(OnPlantStateChanged);
+            //plantLifeStateMachine.StateChangedEvent.AddListener(OnPlantLifeStateChanged);
+            
         }
 
         private void OnDisable()
         {
-            plantStateMachine.StateChangedEvent.RemoveListener(OnPlantStateChanged);
-            plantLifeStateMachine.StateChangedEvent.RemoveListener(OnPlantLifeStateChanged);
+            //plantStateMachine.StateChangedEvent.RemoveListener(OnPlantStateChanged);
+            //plantLifeStateMachine.StateChangedEvent.RemoveListener(OnPlantLifeStateChanged);
         }
 
         private void OnPlantStateChanged(PlantState currentState)
@@ -85,7 +91,7 @@ namespace ChangingSpriteTesting
 
             return -1;
         }
-
+        // aaaaaaaaaaa to vcs n tem ideia de quantas vezes refiz esse script 
         // private void OnEnable()
         // {
         //     // foreach (var plantInfo in plantInfos)
