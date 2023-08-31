@@ -20,8 +20,10 @@ public class SpriteUpdater : MonoBehaviour
         state.stateEnteredEvent.RemoveListener(UpdateSprite);
     }
 
-    void UpdateSprite()
+    public void UpdateSprite()
     {
         renderer.sprite = sprite;
     }
+
+  
 }
