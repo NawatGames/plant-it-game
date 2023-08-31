@@ -20,8 +20,8 @@ namespace ChangingSpriteTesting
         
         private void Awake()
         {
-            OnPlantStateChanged(plantStateMachine.GetState());
-            OnPlantLifeStateChanged(plantLifeStateMachine.GetState());
+            OnPlantAllStateChanged(plantStateMachine.GetState());
+            
         }
         private void OnEnable()
         {
@@ -36,7 +36,7 @@ namespace ChangingSpriteTesting
             //plantLifeStateMachine.StateChangedEvent.RemoveListener(OnPlantLifeStateChanged);
         }
 
-        private void OnPlantStateChanged(PlantState currentState)
+        private void OnPlantAllStateChanged(PlantState currentState)
         {
             int foundState = CheckingPlantState(currentState);
             int foundLifeState = CheckingPlantLifeState(plantLifeStateMachine.GetState());
@@ -51,20 +51,7 @@ namespace ChangingSpriteTesting
             }
         }
 
-        private void OnPlantLifeStateChanged(PlantLifeState currentState)
-        {
-            int foundState = CheckingPlantState(plantStateMachine.GetState());
-            int foundLifeState = CheckingPlantLifeState(currentState);
-
-            if (foundState != -1 && foundLifeState != -1)
-            {
-                plantInfos[foundState].spriteUpdater.UpdateSprite();
-            }
-            else
-            {
-                Debug.LogError("Plant state not found");
-            }
-        }
+       
 
         private int CheckingPlantState(PlantState plantState)
         {
