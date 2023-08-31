@@ -2064,6 +2064,10 @@ PrefabInstance:
       propertyPath: stateStarEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2394288146990204964, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: currentState
+      value: 
+      objectReference: {fileID: 1125742067}
     - target: {fileID: 2643382659965397769, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: plantInfos.Array.data[0].sprite
       value: 
@@ -2081,6 +2085,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1125742068}
     - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: plantInfos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: plantLifeStateMachine
       value: 
       objectReference: {fileID: 1125742069}
@@ -2093,6 +2101,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 146565173e4a6ef478d3911b8009bb49, type: 3}
     - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: plantInfos.Array.data[2].plantState
+      value: 
+      objectReference: {fileID: 1125742065}
+    - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: plantInfos.Array.data[0].spriteUpdater
       value: 
       objectReference: {fileID: 2081713778}
@@ -2101,11 +2113,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2081713777}
     - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: plantInfos.Array.data[2].spriteUpdater
+      value: 
+      objectReference: {fileID: 2081713777}
+    - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: plantInfos.Array.data[0].plantLifeState
       value: 
       objectReference: {fileID: 2081713776}
     - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: plantInfos.Array.data[1].plantLifeState
+      value: 
+      objectReference: {fileID: 2081713776}
+    - target: {fileID: 5178254015905989454, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: plantInfos.Array.data[2].plantLifeState
       value: 
       objectReference: {fileID: 2081713776}
     - target: {fileID: 5450789690111121052, guid: df8e19e823e5648b680983018a802da2, type: 3}
@@ -2216,7 +2236,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2643382659965397769, guid: df8e19e823e5648b680983018a802da2, type: 3}
+    - {fileID: 425770029635028111, guid: df8e19e823e5648b680983018a802da2, type: 3}
+    - {fileID: 8014431575253316638, guid: df8e19e823e5648b680983018a802da2, type: 3}
+    - {fileID: 7280629316307409237, guid: df8e19e823e5648b680983018a802da2, type: 3}
+    - {fileID: 6758539018194948024, guid: df8e19e823e5648b680983018a802da2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
