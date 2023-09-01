@@ -4,11 +4,9 @@ using UnityEngine;
 public class PlantHibernationController : MonoBehaviour
 {
     [SerializeField] private SleepinessMeter sleepiness;
-    [SerializeField] private HibernationStateMachine hibernationStateMachine;
+    [SerializeField] private PlantLifeStateMachine lifeStateMachine;
+    [SerializeField] private PlantLifeState hibernatingState;
     [SerializeField] [Range(0f,1f)] float maxSleepiness = .9f;
-    [SerializeField] private GameObject hibernationAnimation;
-    [SerializeField] private HibernationState hibernatingState;
-    [SerializeField] private HibernationState awakeState;
 
     private void OnEnable()
     {
@@ -22,15 +20,7 @@ public class PlantHibernationController : MonoBehaviour
 
     private void OnSleepinessAmmountChanged(float ammount)
     {
-        if (ammount > maxSleepiness)
-        {
-            hibernationAnimation.SetActive(true);
-            hibernationStateMachine.SetState(hibernatingState);
-        }
-        else
-        {
-            hibernationAnimation.SetActive(false);
-            hibernationStateMachine.SetState(awakeState);
-        }
+        if (ammount < maxSleepiness) return;
+        lifeStateMachine.SetState(hibernatingState);
     }
 }
