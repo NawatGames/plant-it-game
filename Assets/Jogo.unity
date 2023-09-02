@@ -1220,7 +1220,9 @@ MonoBehaviour:
   plantLifeState: {fileID: 635832918}
   plantLifeStateMachine: {fileID: 1125742069}
   plantGrowingStateMachine: {fileID: 1125742068}
-  plantInfosList: []
+  plantInfosList:
+  - plantGrowingState: {fileID: 1125742065}
+    sprite: {fileID: 21300000, guid: cbc8acf94c69eff2e9463b09324402b0, type: 3}
 --- !u!1001 &651167396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1380,7 +1382,9 @@ MonoBehaviour:
   plantLifeState: {fileID: 764470542}
   plantLifeStateMachine: {fileID: 1125742069}
   plantGrowingStateMachine: {fileID: 1125742068}
-  plantInfosList: []
+  plantInfosList:
+  - plantGrowingState: {fileID: 1125742065}
+    sprite: {fileID: 21300000, guid: dbd4ccceb931fef48ad97a46d5d3e576, type: 3}
 --- !u!1 &868756166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1786,11 @@ MonoBehaviour:
   plantLifeState: {fileID: 942785743}
   plantLifeStateMachine: {fileID: 1125742069}
   plantGrowingStateMachine: {fileID: 1125742068}
-  plantInfosList: []
+  plantInfosList:
+  - plantGrowingState: {fileID: 1125742067}
+    sprite: {fileID: 21300000, guid: cadf9123b526efc4a80b3d8a6a08fa88, type: 3}
+  - plantGrowingState: {fileID: 1125742066}
+    sprite: {fileID: 21300000, guid: 5a52624420e57904a854ba896122c57d, type: 3}
 --- !u!1001 &999976237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2022,7 +2030,11 @@ MonoBehaviour:
   plantLifeState: {fileID: 1086514380}
   plantLifeStateMachine: {fileID: 1125742069}
   plantGrowingStateMachine: {fileID: 1125742068}
-  plantInfosList: []
+  plantInfosList:
+  - plantGrowingState: {fileID: 1125742067}
+    sprite: {fileID: 21300000, guid: a1bcb778f64b1ca5381b6a0eba9ce9d2, type: 3}
+  - plantGrowingState: {fileID: 1125742066}
+    sprite: {fileID: 21300000, guid: 886f53e7c0dece7d0a509d77152ba9e4, type: 3}
 --- !u!1001 &1090535798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2954,7 +2966,11 @@ MonoBehaviour:
   plantLifeState: {fileID: 1125742070}
   plantLifeStateMachine: {fileID: 1125742069}
   plantGrowingStateMachine: {fileID: 1125742068}
-  plantInfosList: []
+  plantInfosList:
+  - plantGrowingState: {fileID: 1125742067}
+    sprite: {fileID: 21300000, guid: 63453cb7409265843b1f4f7228582a3e, type: 3}
+  - plantGrowingState: {fileID: 1125742066}
+    sprite: {fileID: 21300000, guid: d9d56600b4592cf43bd378752564342c, type: 3}
 --- !u!1001 &1589031605
 PrefabInstance:
   m_ObjectHideFlags: 0

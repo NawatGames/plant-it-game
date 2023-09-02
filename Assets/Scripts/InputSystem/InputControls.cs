@@ -71,6 +71,15 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MouseDelta"",
+                    ""type"": ""Value"",
+                    ""id"": ""c8a925e7-b972-4c05-a08f-fd2db1f0d3a5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -128,6 +137,17 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""action"": ""Scroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4d2f766-0ff8-4b9f-832b-38d6b63fc24a"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseDelta"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -158,6 +178,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
         m_Player_MiddleClick = m_Player.FindAction("MiddleClick", throwIfNotFound: true);
         m_Player_Scroll = m_Player.FindAction("Scroll", throwIfNotFound: true);
+        m_Player_MouseDelta = m_Player.FindAction("MouseDelta", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -224,6 +245,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MousePos;
     private readonly InputAction m_Player_MiddleClick;
     private readonly InputAction m_Player_Scroll;
+    private readonly InputAction m_Player_MouseDelta;
     public struct PlayerActions
     {
         private @InputControls m_Wrapper;
@@ -233,6 +255,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputAction @MiddleClick => m_Wrapper.m_Player_MiddleClick;
         public InputAction @Scroll => m_Wrapper.m_Player_Scroll;
+        public InputAction @MouseDelta => m_Wrapper.m_Player_MouseDelta;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -257,6 +280,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @Scroll.started += instance.OnScroll;
             @Scroll.performed += instance.OnScroll;
             @Scroll.canceled += instance.OnScroll;
+            @MouseDelta.started += instance.OnMouseDelta;
+            @MouseDelta.performed += instance.OnMouseDelta;
+            @MouseDelta.canceled += instance.OnMouseDelta;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -276,6 +302,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @Scroll.started -= instance.OnScroll;
             @Scroll.performed -= instance.OnScroll;
             @Scroll.canceled -= instance.OnScroll;
+            @MouseDelta.started -= instance.OnMouseDelta;
+            @MouseDelta.performed -= instance.OnMouseDelta;
+            @MouseDelta.canceled -= instance.OnMouseDelta;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -309,5 +338,6 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         void OnMousePos(InputAction.CallbackContext context);
         void OnMiddleClick(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
+        void OnMouseDelta(InputAction.CallbackContext context);
     }
 }

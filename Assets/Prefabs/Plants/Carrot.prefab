@@ -592,7 +592,7 @@ MonoBehaviour:
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
   plantInfosList:
-  - plantGrowingState: {fileID: 0}
+  - plantGrowingState: {fileID: 2903893144294070193}
     sprite: {fileID: 0}
 --- !u!1 &3928580766400853657 stripped
 GameObject:
