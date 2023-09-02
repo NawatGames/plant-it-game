@@ -336,6 +336,10 @@ PrefabInstance:
       propertyPath: stateEnteredEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6820789233453801985, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: m_Name
+      value: GrowingStateMachine
+      objectReference: {fileID: 0}
     - target: {fileID: 6883081325212221730, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: stateLeavedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0

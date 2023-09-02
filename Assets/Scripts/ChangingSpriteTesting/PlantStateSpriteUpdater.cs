@@ -22,7 +22,7 @@ namespace ChangingSpriteTesting
         
         Dictionary<PlantGrowingState, Sprite> plantInfosDictionary = new Dictionary<PlantGrowingState, Sprite>();
         private PlantGrowingState _plantGrowingState;
-
+        private bool _isActive;
         private void Awake()
         {
             foreach (var plantInfo in plantInfosList)
@@ -34,24 +34,43 @@ namespace ChangingSpriteTesting
         private void OnEnable()
         {
             plantLifeState.stateEnteredEvent.AddListener(OnLifeStateEntered);
+            plantLifeState.stateLeavedEvent.AddListener(OnLifeStateLeaved);
             plantGrowingStateMachine.StateChangedEvent.AddListener(OnGrowingStateChanged);
+            
         }
 
         private void OnDisable()
         {
             plantLifeState.stateEnteredEvent.RemoveListener(OnLifeStateEntered);
+            plantLifeState.stateLeavedEvent.RemoveListener(OnLifeStateLeaved);
             plantGrowingStateMachine.StateChangedEvent.RemoveListener(OnGrowingStateChanged);
         }
 
-        private void OnGrowingStateChanged(PlantGrowingState arg0, PlantGrowingState plantGrowingState)
+        private void OnGrowingStateChanged(PlantGrowingState newState, PlantGrowingState oldState)
+        {  
+            _plantGrowingState = newState;
+            if (_isActive)
+            {
+                Refresh();
+            }
+        }
+
+        private void Refresh()
         {
-            _plantGrowingState = arg0;
+            if(plantInfosDictionary.ContainsKey(_plantGrowingState) == false) return;
+            var sprite = plantInfosDictionary[_plantGrowingState];
+            renderer.sprite = sprite;
         }
 
         private void OnLifeStateEntered()
         {
-            var sprite = plantInfosDictionary[_plantGrowingState];
-            renderer.sprite = sprite;
+            Refresh();
+            _isActive = true;
+        }
+
+        private void OnLifeStateLeaved()
+        {
+            _isActive = false;
         }
     }
 }

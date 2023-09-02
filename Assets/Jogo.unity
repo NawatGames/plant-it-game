@@ -2233,9 +2233,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1125742066}
     - target: {fileID: 2394288146990204964, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: initialState
+      value: 
+      objectReference: {fileID: 1125742065}
+    - target: {fileID: 2394288146990204964, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: currentGrowingState
       value: 
-      objectReference: {fileID: 1125742067}
+      objectReference: {fileID: 0}
     - target: {fileID: 2394288146990204964, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -2439,7 +2443,7 @@ PrefabInstance:
     - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: nextState
       value: 
-      objectReference: {fileID: 2081713776}
+      objectReference: {fileID: 764470542}
     - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: currentState
       value: 
@@ -2447,11 +2451,11 @@ PrefabInstance:
     - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: initialState
       value: 
-      objectReference: {fileID: 2081713776}
+      objectReference: {fileID: 764470542}
     - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: currentLifeState
       value: 
-      objectReference: {fileID: 2081713776}
+      objectReference: {fileID: 0}
     - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
