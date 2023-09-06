@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 380bb27f0796250edbc4806a53049425, type: 3}
-  m_Name: "Maram\xE3o"
+  m_Name: Carrot
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6801394480434634138, guid: 5600a7d7140bed314afcc016a330807e, type: 3}
+  prefab: {fileID: 6141188575024390409, guid: df8e19e823e5648b680983018a802da2, type: 3}
   plantSelectEvent:
     m_PersistentCalls:
       m_Calls: []
