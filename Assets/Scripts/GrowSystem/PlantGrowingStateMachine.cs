@@ -12,7 +12,7 @@ public class PlantGrowingStateMachine : MonoBehaviour
      
      [SerializeField] private PlantGrowingState currentGrowingState;
      [SerializeField] private PlantGrowingState initialState;
-     [SerializeField]private PlantGrowingState nextState;
+     [SerializeField] private PlantGrowingState nextState;
 
      public UnityEvent<PlantGrowingState,PlantGrowingState> StateChangedEvent;
 
