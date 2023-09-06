@@ -21,6 +21,6 @@ public class PlantHibernationController : MonoBehaviour
     private void OnSleepinessAmmountChanged(float ammount)
     {
         if (ammount < maxSleepiness) return;
-        lifeStateMachine.SetState(hibernatingState);
+        lifeStateMachine.ChangeState(hibernatingState);
     }
 }
