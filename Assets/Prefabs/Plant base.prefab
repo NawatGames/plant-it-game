@@ -257,6 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ece190675d4ab083a8e3754ec6b1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGrowingState: {fileID: 0}
+  initialState: {fileID: 0}
+  nextState: {fileID: 0}
   StateChangedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -272,7 +275,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  currentState: {fileID: 0}
 --- !u!1 &8384999243324852060
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b9f79c8de6cc21fa39010d2801fe1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 0}
+  currentLifeState: {fileID: 0}
+  initialState: {fileID: 0}
+  nextState: {fileID: 0}
   StateChangedEvent:
     m_PersistentCalls:
       m_Calls: []

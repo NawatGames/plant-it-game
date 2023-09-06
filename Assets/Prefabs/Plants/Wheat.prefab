@@ -330,6 +330,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2574ccc0cd410caf9a1432febf24334, type: 3}
+--- !u!114 &3828464518504788233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1381347195007921428, guid: e2574ccc0cd410caf9a1432febf24334, type: 3}
+  m_PrefabInstance: {fileID: 2741275755287141405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37852267e6bd4e04be178e645e5f6b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8835052450685561105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6671694317797078284, guid: e2574ccc0cd410caf9a1432febf24334, type: 3}
@@ -900,15 +911,281 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8635091600920334946, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8835052450685561105}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8478567451012363454, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2505874010195836767}
+    - targetCorrespondingSourceObject: {fileID: 8300231800188989325, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2198304820692672261}
+    - targetCorrespondingSourceObject: {fileID: 3342724654979952362, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5621086885705130981}
+    - targetCorrespondingSourceObject: {fileID: 3447570160303179725, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3714309090278769523}
+    - targetCorrespondingSourceObject: {fileID: 1450701249106177022, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7362003546124095635}
+    - targetCorrespondingSourceObject: {fileID: 1351254547532492458, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6125035955794601975}
   m_SourcePrefab: {fileID: 100100000, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+--- !u!1 &1177478981338354532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8300231800188989325, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2198304820692672261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177478981338354532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 4387345801343761867}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 3828464518504788233}
+    sprite: {fileID: 21300000, guid: 14616720e2e2d004da52e7e88410ff63, type: 3}
 --- !u!4 &1491083121529187979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8635091600920334946, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
   m_PrefabInstance: {fileID: 7162806147194502377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643402721791101015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8478567451012363454, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2505874010195836767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643402721791101015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 4214048972794816248}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 1677908328128556792}
+    sprite: {fileID: 21300000, guid: 0732cdb834ec79144a49cb53d75c3139, type: 3}
+  - plantGrowingState: {fileID: 1560191323405793185}
+    sprite: {fileID: 21300000, guid: 80c802d5fa792224ba86a8bd452e71a9, type: 3}
+  - plantGrowingState: {fileID: 3352665556218070411}
+    sprite: {fileID: 21300000, guid: a560bc02b3322a24ea907beb3fb5a3a5, type: 3}
+--- !u!114 &1683547964870889963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8375094185362271490, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b9f79c8de6cc21fa39010d2801fe1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &3452566985760739446 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5516519612356865183, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
   m_PrefabInstance: {fileID: 7162806147194502377}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4214048972794816248 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6421052296599951889, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643402721791101015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4387345801343761867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6883081325212221730, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177478981338354532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5530241082985069348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3447570160303179725, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3714309090278769523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530241082985069348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 6920512901129475467}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 1677908328128556792}
+    sprite: {fileID: 21300000, guid: 7b70b3809ed3bcad68fc3ebf79a59840, type: 3}
+  - plantGrowingState: {fileID: 1560191323405793185}
+    sprite: {fileID: 21300000, guid: 534a9f7d3b663d548a6e1e1c19daa569, type: 3}
+  - plantGrowingState: {fileID: 3352665556218070411}
+    sprite: {fileID: 21300000, guid: 36b689c8db260a257ae1ebc944e1bcfd, type: 3}
+--- !u!1 &5549798553637229059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3342724654979952362, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5621086885705130981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549798553637229059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 7039439881764486316}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 1677908328128556792}
+    sprite: {fileID: 21300000, guid: a7647597bd06c10479d790e336da5b7d, type: 3}
+  - plantGrowingState: {fileID: 1560191323405793185}
+    sprite: {fileID: 21300000, guid: 0f95720a0ae83954a9786ca86f7d9ab0, type: 3}
+  - plantGrowingState: {fileID: 3352665556218070411}
+    sprite: {fileID: 21300000, guid: 2e9b67dca32985a48a5fd5f9170d9515, type: 3}
+--- !u!114 &6625725255014906296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4076927810822489425, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8594709925797779223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6706490691335306476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4500604548234215429, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189788120905749059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6920512901129475467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 247134946636310882, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530241082985069348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6987805559629408682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 260868065941968195, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ece190675d4ab083a8e3754ec6b1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7039439881764486316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 204486602322935877, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549798553637229059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8189788120905749059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1351254547532492458, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6125035955794601975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189788120905749059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 6706490691335306476}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 3828464518504788233}
+    sprite: {fileID: 21300000, guid: da5b740929893a1c7abe28dad29fc3a2, type: 3}
+--- !u!1 &8594709925797779223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1450701249106177022, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 7162806147194502377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7362003546124095635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8594709925797779223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 3452566985760739446}
+  plantLifeState: {fileID: 6625725255014906296}
+  plantLifeStateMachine: {fileID: 1683547964870889963}
+  plantGrowingStateMachine: {fileID: 6987805559629408682}
+  plantInfosList:
+  - plantGrowingState: {fileID: 1677908328128556792}
+    sprite: {fileID: 21300000, guid: 85c5445743afacc4983fa04af3d6254a, type: 3}
+  - plantGrowingState: {fileID: 1560191323405793185}
+    sprite: {fileID: 21300000, guid: 593b3a940ca7c334993dcfded2127502, type: 3}
+  - plantGrowingState: {fileID: 3352665556218070411}
+    sprite: {fileID: 21300000, guid: 767d70ce65a94184ea816aea6c2fb53e, type: 3}
