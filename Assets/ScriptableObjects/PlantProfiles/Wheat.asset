@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 380bb27f0796250edbc4806a53049425, type: 3}
-  m_Name: Trigo
+  m_Name: Wheat
   m_EditorClassIdentifier: 
   prefab: {fileID: 1511650611307102343, guid: 3cc8ce82055bdf7ff8a2d5e5105db2f0, type: 3}
   plantSelectEvent:
