@@ -5,23 +5,23 @@ using UnityEngine.Events;
 
 public class SleepinessMeter : MonoBehaviour
 {
-    [SerializeField] [Range(0f,1f)] private float currentAmmount = 0f;
-    public UnityEvent<float> AmmountChangedEvent;
-    
-    public void SetAmmount(float ammount)
+    [SerializeField] [Range(0f, 1f)] private float currentAmount = 0f;
+    public UnityEvent<float> amountChangedEvent;
+
+    public void SetAmount(float amount)
     {
-        currentAmmount = Mathf.Clamp01(ammount);
-        AmmountChangedEvent.Invoke(currentAmmount);
+        currentAmount = Mathf.Clamp01(amount);
+        amountChangedEvent.Invoke(currentAmount);
     }
-    
-    public float GetAmmount()
+
+    public float GetAmount()
     {
-        return currentAmmount;
+        return currentAmount;
     }
-    
+
     [ContextMenu("Refresh")]
     private void Refresh()
     {
-        AmmountChangedEvent.Invoke(currentAmmount);
+        amountChangedEvent.Invoke(currentAmount);
     }
 }

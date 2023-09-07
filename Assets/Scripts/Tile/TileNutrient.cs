@@ -6,30 +6,32 @@ using UnityEngine.Events;
 
 public class TileNutrient : MonoBehaviour
 {
-    [SerializeField] [Range(0f,1f)] private float currentAmmount = 0f;
+    [SerializeField] [Range(0f, 1f)] private float currentAmount = 0f;
 
-    public UnityEvent<float> AmmountChangedEvent;
+    public UnityEvent<float> amountChangedEvent;
 
     public void SetAmmount(float ammount)
     {
-        currentAmmount = Mathf.Clamp01(ammount);
-        AmmountChangedEvent.Invoke(currentAmmount);
+        currentAmount = Mathf.Clamp01(ammount);
+        amountChangedEvent.Invoke(currentAmount);
     }
 
-    public float GetAmmount()
+    public float GetAmount()
     {
-        return currentAmmount;
+        return currentAmount;
     }
-[ContextMenu("Refresh")]
+
+    [ContextMenu("Refresh")]
     private void Refresh()
     {
-        AmmountChangedEvent.Invoke(currentAmmount);
+        amountChangedEvent.Invoke(currentAmount);
     }
 
     public float speed;
+
     private void Update()
     {
         var deltaTime = speed * Time.deltaTime;
-        SetAmmount(currentAmmount - deltaTime);
+        SetAmmount(currentAmount - deltaTime);
     }
 }

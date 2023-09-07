@@ -5,24 +5,24 @@ namespace DirtTile
 {
     public class DirtTileStateController : MonoBehaviour
     {
-        [SerializeField]private TileNutrient waterTileNutrient;
-        [SerializeField]private TileDirtStateMachine dirtStateMachine;
+        [SerializeField] private TileNutrient waterTileNutrient;
+        [SerializeField] private TileDirtStateMachine dirtStateMachine;
 
         private void OnEnable()
         {
-            waterTileNutrient.AmmountChangedEvent.AddListener(OnWaterTileNutrientAmmountChanged);
+            waterTileNutrient.amountChangedEvent.AddListener(OnWaterTileNutrientAmountChanged);
         }
 
         private void OnDisable()
         {
-            waterTileNutrient.AmmountChangedEvent.RemoveListener(OnWaterTileNutrientAmmountChanged);
+            waterTileNutrient.amountChangedEvent.RemoveListener(OnWaterTileNutrientAmountChanged);
         }
 
-        private void OnWaterTileNutrientAmmountChanged(float arg0)
+        private void OnWaterTileNutrientAmountChanged(float amount)
         {
             if (transform.childCount == 0)
                 return;
-            var index = (int)Mathf.Round((transform.childCount - 1) * arg0);
+            var index = (int)Mathf.Round((transform.childCount - 1) * amount);
             dirtStateMachine.SetState(dirtStateMachine.transform.GetChild(index).GetComponent<TileDirtState>());
         }
     }

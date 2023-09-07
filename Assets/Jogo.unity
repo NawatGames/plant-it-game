@@ -2168,6 +2168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cenoura
       objectReference: {fileID: 0}
+    - target: {fileID: 6241634715414327397, guid: df8e19e823e5648b680983018a802da2, type: 3}
+      propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

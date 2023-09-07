@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+
 public class PopUp : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     private Image popUpImage;
@@ -12,7 +13,7 @@ public class PopUp : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     private Text plantNamePopUp;
     private Text plantStatePopUp;
     private Text dirtNutrientPopUp;
-    
+
     public UnityEvent mouseExitEvent;
     public UnityEvent mouseEnterEvent;
     public UnityEvent destroyPopUpEvent;
@@ -22,10 +23,10 @@ public class PopUp : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         mouseExitEvent.Invoke();
-        StartCoroutine(KillPopUPCoroutine());
+        StartCoroutine(KillPopUpCoroutine());
     }
 
-    private IEnumerator KillPopUPCoroutine()
+    private IEnumerator KillPopUpCoroutine()
     {
         var time = 0f;
         while (time < timeToDestroy)

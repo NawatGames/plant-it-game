@@ -14,15 +14,16 @@ namespace ChangingSpriteTesting
 
     public class PlantStateSpriteUpdater : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer renderer;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private PlantLifeState plantLifeState;
         [SerializeField] private PlantLifeStateMachine plantLifeStateMachine;
         [SerializeField] private PlantGrowingStateMachine plantGrowingStateMachine;
         [SerializeField] private List<PlantInfo> plantInfosList;
-        
+
         Dictionary<PlantGrowingState, Sprite> plantInfosDictionary = new Dictionary<PlantGrowingState, Sprite>();
-        private PlantGrowingState _plantGrowingState;
-        private bool _isActive;
+        private PlantGrowingState plantGrowingState;
+        private bool isActive;
+
         private void Awake()
         {
             foreach (var plantInfo in plantInfosList)
@@ -35,21 +36,20 @@ namespace ChangingSpriteTesting
         {
             plantLifeState.stateEnteredEvent.AddListener(OnLifeStateEntered);
             plantLifeState.stateLeavedEvent.AddListener(OnLifeStateLeaved);
-            plantGrowingStateMachine.StateChangedEvent.AddListener(OnGrowingStateChanged);
-            
+            plantGrowingStateMachine.stateChangedEvent.AddListener(OnGrowingStateChanged);
         }
 
         private void OnDisable()
         {
             plantLifeState.stateEnteredEvent.RemoveListener(OnLifeStateEntered);
             plantLifeState.stateLeavedEvent.RemoveListener(OnLifeStateLeaved);
-            plantGrowingStateMachine.StateChangedEvent.RemoveListener(OnGrowingStateChanged);
+            plantGrowingStateMachine.stateChangedEvent.RemoveListener(OnGrowingStateChanged);
         }
 
         private void OnGrowingStateChanged(PlantGrowingState newState, PlantGrowingState oldState)
-        {  
-            _plantGrowingState = newState;
-            if (_isActive)
+        {
+            plantGrowingState = newState;
+            if (isActive)
             {
                 Refresh();
             }
@@ -57,20 +57,20 @@ namespace ChangingSpriteTesting
 
         private void Refresh()
         {
-            if(plantInfosDictionary.ContainsKey(_plantGrowingState) == false) return;
-            var sprite = plantInfosDictionary[_plantGrowingState];
-            renderer.sprite = sprite;
+            if (plantInfosDictionary.ContainsKey(plantGrowingState) == false) return;
+            var sprite = plantInfosDictionary[plantGrowingState];
+            spriteRenderer.sprite = sprite;
         }
 
         private void OnLifeStateEntered()
         {
             Refresh();
-            _isActive = true;
+            isActive = true;
         }
 
         private void OnLifeStateLeaved()
         {
-            _isActive = false;
+            isActive = false;
         }
     }
 }

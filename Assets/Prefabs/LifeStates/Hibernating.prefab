@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7448461744372859922, guid: 6cad4cef449a0e0cfb3c5f48291a31b0, type: 3}
       propertyPath: m_Name
-      value: LifeStateBase
+      value: Hibernating
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

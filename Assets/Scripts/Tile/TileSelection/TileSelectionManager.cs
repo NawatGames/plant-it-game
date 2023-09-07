@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class TileSelectionManager : MonoBehaviour
 {
     private Camera cameraMain;
-    
+
     [SerializeField] private InputManager inputManager;
     private Vector2 _mousePosition;
     private TileSelectionHandler _currentTileSelectionHandler;
@@ -29,7 +29,7 @@ public class TileSelectionManager : MonoBehaviour
     {
         inputManager.mouseMovementEvent.RemoveListener(OnMouseMovement);
     }
-    
+
     [ContextMenu("OpenPopUp")]
     public void OpenPopUp()
     {
@@ -41,6 +41,7 @@ public class TileSelectionManager : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
             tilePopUpHandler = hitObject.GetComponent<TileSelectionHandler>();
         }
+
         SetTilePopUpHandle(tilePopUpHandler);
     }
 
@@ -50,8 +51,8 @@ public class TileSelectionManager : MonoBehaviour
         {
             return;
         }
-        
-        if(_currentTileSelectionHandler != null)
+
+        if (_currentTileSelectionHandler != null)
         {
             _currentTileSelectionHandler.Unselect();
         }
@@ -61,17 +62,19 @@ public class TileSelectionManager : MonoBehaviour
             _buildPopUp.destroyPopUpEvent.RemoveListener(OnPopUpClosed);
             Destroy(_buildPopUp.gameObject);
         }
+
         _currentTileSelectionHandler = tileSelectionHandler;
-        if(_currentTileSelectionHandler != null)
+        if (_currentTileSelectionHandler != null)
         {
             _currentTileSelectionHandler.Select();
         }
+
         currentTilePopUpHandlerChangedEvent.Invoke(tileSelectionHandler);
         if (tileSelectionHandler == null)
         {
-            
             return;
         }
+
         _buildPopUp = popUpBuilder.BuildPopUp(tileSelectionHandler);
         _buildPopUp.destroyPopUpEvent.AddListener(OnPopUpClosed);
     }
@@ -80,10 +83,9 @@ public class TileSelectionManager : MonoBehaviour
     {
         SetTilePopUpHandle(null);
     }
-    
+
     private void OnMouseMovement(Vector2 arg0)
     {
         _mousePosition = arg0;
     }
-    
 }

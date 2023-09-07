@@ -6,8 +6,8 @@ using UnityEngine.Serialization;
 
 public class ScreenStateMachines : MonoBehaviour
 {
-    public UnityEvent<ScreenState> StateChangedEvent;
-    private ScreenState _currentState;
+    public UnityEvent<ScreenState> stateChangedEvent;
+    private ScreenState currentState;
     [SerializeField] private ScreenState nextState;
     [SerializeField] private ScreenState initialState;
 
@@ -18,24 +18,25 @@ public class ScreenStateMachines : MonoBehaviour
             SetState(initialState);
         }
     }
-    
+
     public void SetState(ScreenState newState)
     {
-        if (_currentState != null)
+        if (currentState != null)
         {
-            _currentState.LeaveState();
+            currentState.LeaveState();
         }
-        _currentState = newState;
-        StateChangedEvent.Invoke(newState);
-        if (_currentState != null)
+
+        currentState = newState;
+        stateChangedEvent.Invoke(newState);
+        if (currentState != null)
         {
-            _currentState.EnterState();
+            currentState.EnterState();
         }
     }
 
     public ScreenState GetState()
     {
-        return _currentState;
+        return currentState;
     }
 
     [ContextMenu("refresh")]

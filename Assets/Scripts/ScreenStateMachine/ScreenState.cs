@@ -14,8 +14,8 @@ public class ScreenState : MonoBehaviour
     {
         stateEnteredEvent.Invoke();
     }
-    
-    
+
+
     public void LeaveState()
     {
         stateLeavedEvent.Invoke();

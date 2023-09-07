@@ -20,12 +20,12 @@ public class ScreenActivator : MonoBehaviour
         screenState.stateEnteredEvent.RemoveListener(OnStateEntered);
         screenState.stateLeavedEvent.RemoveListener(OnStateLeaved);
     }
-    
+
     protected virtual void OnStateEntered()
     {
         screenToActivate.SetActive(true);
     }
-    
+
     protected virtual void OnStateLeaved()
     {
         screenToActivate.SetActive(false);

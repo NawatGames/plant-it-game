@@ -9,10 +9,10 @@ namespace GrowSystem
         public float currentTime;
         public float maxTime;
         public UnityEvent timeReachedEvent;
-        
+
         private void Start()
         {
-            currentTime = maxTime;            
+            currentTime = maxTime;
         }
 
         private void Update()
