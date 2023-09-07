@@ -807,7 +807,11 @@ PrefabInstance:
       value: "Maram\xE3o"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3964215623846184893, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 38229285710837344, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 2722043558355860875, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 6365737299066486338, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8635091600920334946, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       insertIndex: -1
@@ -1022,7 +1026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 7309594429481749867}
-  plantLifeState: {fileID: 0}
+  plantLifeState: {fileID: 8537670150919872726}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
   plantInfosList:
@@ -1083,6 +1087,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3025988197901312500}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6653949801767982410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8537670150919872726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6883081325212221730, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+  m_PrefabInstance: {fileID: 3025988197901312500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543203469250317945}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}

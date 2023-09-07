@@ -473,7 +473,11 @@ PrefabInstance:
       value: Carrot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3964215623846184893, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 38229285710837344, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 2722043558355860875, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+    - {fileID: 6365737299066486338, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8635091600920334946, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       insertIndex: -1
