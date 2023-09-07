@@ -14,17 +14,17 @@ public class TileStateMachine : MonoBehaviour
         {
             currentProfileSO.plantUnselectEvent.Invoke();
         }
-        
+
         currentProfileSO = newProfile;
-        
+
         stateChangedEvent.Invoke(newProfile);
-        
+
         if (currentProfileSO != null)
         {
             currentProfileSO.plantSelectEvent.Invoke();
         }
     }
-    
+
     public PlantProfileSO GetProfile()
     {
         return currentProfileSO;

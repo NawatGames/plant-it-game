@@ -5,9 +5,10 @@ namespace DirtTile
 {
     public class TileDirtSpriteUpdater : MonoBehaviour
     {
-        [SerializeField]private Sprite sprite;
-        [SerializeField]private SpriteRenderer spriteRenderer;
-        [SerializeField]private TileDirtState tileDirtState;
+        [SerializeField] private Sprite sprite;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private TileDirtState tileDirtState;
+
         private void OnEnable()
         {
             tileDirtState.enterEvent.AddListener(OnEnter);

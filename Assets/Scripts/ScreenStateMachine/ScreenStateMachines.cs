@@ -18,13 +18,14 @@ public class ScreenStateMachines : MonoBehaviour
             SetState(initialState);
         }
     }
-    
+
     public void SetState(ScreenState newState)
     {
         if (currentState != null)
         {
             currentState.LeaveState();
         }
+
         currentState = newState;
         stateChangedEvent.Invoke(newState);
         if (currentState != null)

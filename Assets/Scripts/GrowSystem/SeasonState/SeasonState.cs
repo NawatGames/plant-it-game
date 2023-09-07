@@ -14,8 +14,8 @@ public class SeasonState : MonoBehaviour
     {
         stateEnteredEvent.Invoke();
     }
-    
-    
+
+
     public void LeaveState()
     {
         stateLeavedEvent.Invoke();

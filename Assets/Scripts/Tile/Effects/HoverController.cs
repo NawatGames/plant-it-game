@@ -30,5 +30,4 @@ public class HoverController : MonoBehaviour
     {
         hoverSprite.SetActive(false);
     }
-    
 }

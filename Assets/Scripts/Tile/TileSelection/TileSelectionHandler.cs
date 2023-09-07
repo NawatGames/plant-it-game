@@ -7,10 +7,10 @@ namespace UI.PopUp
     public class TileSelectionHandler : MonoBehaviour
     {
         public GameObject popUpPrefab;
-        
-        public UnityEvent selectedEvent; 
+
+        public UnityEvent selectedEvent;
         public UnityEvent unselectedEvent;
-        
+
         public virtual void Select()
         {
             selectedEvent.Invoke();

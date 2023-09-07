@@ -19,10 +19,11 @@ namespace ChangingSpriteTesting
         [SerializeField] private PlantLifeStateMachine plantLifeStateMachine;
         [SerializeField] private PlantGrowingStateMachine plantGrowingStateMachine;
         [SerializeField] private List<PlantInfo> plantInfosList;
-        
+
         Dictionary<PlantGrowingState, Sprite> plantInfosDictionary = new Dictionary<PlantGrowingState, Sprite>();
         private PlantGrowingState plantGrowingState;
         private bool isActive;
+
         private void Awake()
         {
             foreach (var plantInfo in plantInfosList)
@@ -36,7 +37,6 @@ namespace ChangingSpriteTesting
             plantLifeState.stateEnteredEvent.AddListener(OnLifeStateEntered);
             plantLifeState.stateLeavedEvent.AddListener(OnLifeStateLeaved);
             plantGrowingStateMachine.stateChangedEvent.AddListener(OnGrowingStateChanged);
-            
         }
 
         private void OnDisable()
@@ -47,7 +47,7 @@ namespace ChangingSpriteTesting
         }
 
         private void OnGrowingStateChanged(PlantGrowingState newState, PlantGrowingState oldState)
-        {  
+        {
             plantGrowingState = newState;
             if (isActive)
             {
@@ -57,7 +57,7 @@ namespace ChangingSpriteTesting
 
         private void Refresh()
         {
-            if(plantInfosDictionary.ContainsKey(plantGrowingState) == false) return;
+            if (plantInfosDictionary.ContainsKey(plantGrowingState) == false) return;
             var sprite = plantInfosDictionary[plantGrowingState];
             spriteRenderer.sprite = sprite;
         }

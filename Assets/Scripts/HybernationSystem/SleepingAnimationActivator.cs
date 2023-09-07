@@ -5,6 +5,7 @@ public class SleepingAnimationActivator : MonoBehaviour
 {
     [SerializeField] private PlantLifeState hibernationState;
     [SerializeField] private GameObject hibernationAnimation;
+
     private void OnEnable()
     {
         hibernationState.stateEnteredEvent.AddListener(EnableAnimation);

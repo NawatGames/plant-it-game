@@ -7,6 +7,7 @@ using UnityEngine;
 public class TilePlantSpawner : MonoBehaviour
 {
     [SerializeField] private TileStateMachine stateMachine;
+
     private void OnEnable()
     {
         stateMachine.stateChangedEvent.AddListener(StateUpdate);
@@ -16,7 +17,7 @@ public class TilePlantSpawner : MonoBehaviour
     {
         stateMachine.stateChangedEvent.RemoveListener(StateUpdate);
     }
-    
+
     private void StateUpdate(PlantProfileSO profile)
     {
         GameObject plant = Instantiate(profile.prefab);

@@ -9,12 +9,12 @@ public class PlantGrowingState : MonoBehaviour
 {
     public UnityEvent stateEnteredEvent;
     public UnityEvent stateLeavedEvent;
-    
+
     public virtual void EnterState()
     {
         stateEnteredEvent.Invoke();
     }
-    
+
     public virtual void LeaveState()
     {
         stateLeavedEvent.Invoke();

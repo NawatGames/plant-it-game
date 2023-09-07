@@ -6,7 +6,7 @@ public class PlantHibernationController : MonoBehaviour
     [SerializeField] private SleepinessMeter sleepiness;
     [SerializeField] private PlantLifeStateMachine lifeStateMachine;
     [SerializeField] private PlantLifeState hibernatingState;
-    [SerializeField] [Range(0f,1f)] private float maxSleepiness = .9f;
+    [SerializeField] [Range(0f, 1f)] private float maxSleepiness = .9f;
 
     private void OnEnable()
     {

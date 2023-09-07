@@ -14,8 +14,8 @@ public class PlantLifeState : MonoBehaviour
     {
         stateEnteredEvent.Invoke();
     }
-    
-    
+
+
     public virtual void LeaveState()
     {
         stateLeavedEvent.Invoke();

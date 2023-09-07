@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 public class PopUpCallerHoverConnector : MonoBehaviour
 {
     public float idleTimeLimit = 0.5f;
-    
+
     [SerializeField] private InputManager inputManager;
     [SerializeField] private TileSelectionManager tileSelectionManager;
 
@@ -21,13 +21,13 @@ public class PopUpCallerHoverConnector : MonoBehaviour
         inputManager.mouseDeltaStoppedEvent.RemoveListener(OnMouseDeltaStopped);
         inputManager.mouseDeltaMovedEvent.RemoveListener(OnMouseDeltaMoved);
     }
-    
+
     public IEnumerator OpenPopUpCoroutine()
     {
         yield return new WaitForSeconds(idleTimeLimit);
         tileSelectionManager.OpenPopUp();
     }
-    
+
     private void OnMouseDeltaStopped(Vector2 arg0)
     {
         StartCoroutine(OpenPopUpCoroutine());

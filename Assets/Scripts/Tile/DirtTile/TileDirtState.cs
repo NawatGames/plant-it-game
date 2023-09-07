@@ -5,8 +5,9 @@ namespace DirtTile
 {
     public class TileDirtState : MonoBehaviour
     {
-        public UnityEvent enterEvent; 
+        public UnityEvent enterEvent;
         public UnityEvent leaveEvent;
+
         public virtual void Enter()
         {
             enterEvent.Invoke();

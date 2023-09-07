@@ -22,18 +22,17 @@ public class PopUpBuilder : MonoBehaviour
     public PopUp BuildPopUp(TileSelectionHandler tileSelectionHandler)
     {
         var prefab = popUpPrefab;
-        if(tileSelectionHandler.popUpPrefab != null) prefab = tileSelectionHandler.popUpPrefab;
-        
+        if (tileSelectionHandler.popUpPrefab != null) prefab = tileSelectionHandler.popUpPrefab;
+
         GameObject instance = Instantiate(prefab, canvas);
 
         var position = tileSelectionHandler.transform.position;
         var screenPoint = (Vector2)camera.WorldToScreenPoint(position) + popUpOffset;
 
         instance.GetComponent<RectTransform>().anchoredPosition = screenPoint;
-        
+
         var popUp = instance.GetComponent<PopUp>();
         if (popUp == null) Debug.LogError("PopUp prefab does not have PopUp component");
         return popUp;
     }
 }
-

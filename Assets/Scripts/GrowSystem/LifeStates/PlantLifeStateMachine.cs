@@ -7,15 +7,16 @@ using UnityEngine.Serialization;
 
 public class PlantLifeStateMachine : MonoBehaviour
 {
-   
     [SerializeField] private PlantLifeState currentLifeState;
     [SerializeField] private PlantLifeState initialState;
-    [SerializeField]private PlantLifeState nextState;
+    [SerializeField] private PlantLifeState nextState;
 
     public UnityEvent<PlantLifeState, PlantLifeState> stateChangedEvent;
 
-    private void Start(){
-        if(initialState != null){
+    private void Start()
+    {
+        if (initialState != null)
+        {
             ChangeState(initialState);
         }
     }
@@ -28,7 +29,7 @@ public class PlantLifeStateMachine : MonoBehaviour
         {
             currentLifeState.LeaveState();
         }
-				
+
         currentLifeState = newState;
 
         if (currentLifeState != null)
@@ -36,17 +37,13 @@ public class PlantLifeStateMachine : MonoBehaviour
             currentLifeState.EnterState();
         }
 
-        stateChangedEvent.Invoke(newState,oldState);
+        stateChangedEvent.Invoke(newState, oldState);
     }
 
 
-        [ContextMenu("SetNextState")]
-        private void SetNextState()
-        {
-            ChangeState(nextState);
-        } 
+    [ContextMenu("SetNextState")]
+    private void SetNextState()
+    {
+        ChangeState(nextState);
+    }
 }
-
-
-
-

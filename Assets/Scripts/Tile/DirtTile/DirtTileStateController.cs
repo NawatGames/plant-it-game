@@ -5,8 +5,8 @@ namespace DirtTile
 {
     public class DirtTileStateController : MonoBehaviour
     {
-        [SerializeField]private TileNutrient waterTileNutrient;
-        [SerializeField]private TileDirtStateMachine dirtStateMachine;
+        [SerializeField] private TileNutrient waterTileNutrient;
+        [SerializeField] private TileDirtStateMachine dirtStateMachine;
 
         private void OnEnable()
         {

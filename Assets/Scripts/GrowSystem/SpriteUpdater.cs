@@ -25,6 +25,4 @@ public class SpriteUpdater : MonoBehaviour
     {
         spriteRenderer.sprite = sprite;
     }
-
-  
 }

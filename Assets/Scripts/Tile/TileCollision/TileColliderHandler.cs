@@ -6,7 +6,7 @@ public class TileColliderHandler : MonoBehaviour
 {
     public UnityEvent mouseEnteringEvent;
     public UnityEvent mouseExitingEvent;
-    
+
     public void OnMouseEnter()
     {
         mouseEnteringEvent.Invoke();

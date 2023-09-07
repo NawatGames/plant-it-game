@@ -5,7 +5,7 @@ public class SliderUpdater : MonoBehaviour
 {
     [SerializeField] private PopUp popUp;
     [SerializeField] private Slider slider;
-    
+
     private void OnEnable()
     {
         popUp.currentTimeChangedEvent.AddListener(OnCurrentTimeChanged);
@@ -20,5 +20,4 @@ public class SliderUpdater : MonoBehaviour
     {
         slider.value = time;
     }
-    
 }

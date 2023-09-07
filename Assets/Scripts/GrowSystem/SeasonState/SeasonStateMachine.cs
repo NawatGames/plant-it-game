@@ -15,6 +15,7 @@ public class SeasonStateMachine : MonoBehaviour
         {
             currentState.LeaveState();
         }
+
         currentState = newState;
         stateChangedEvent.Invoke(newState);
         if (currentState != null)

@@ -10,7 +10,7 @@ public class InventoryManagement : MonoBehaviour
         heldItem.SetActive(false);
         inventory.SetActive(true);
     }
-    
+
     public void CloseInventory()
     {
         heldItem.SetActive(true);
