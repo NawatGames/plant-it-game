@@ -14,7 +14,7 @@ public class PlantGrowingStateMachine : MonoBehaviour
      [SerializeField] private PlantGrowingState initialState;
      [SerializeField] private PlantGrowingState nextState;
 
-     public UnityEvent<PlantGrowingState,PlantGrowingState> StateChangedEvent;
+     public UnityEvent<PlantGrowingState,PlantGrowingState> stateChangedEvent;
 
      private void Start(){
          if(initialState != null){
@@ -38,7 +38,7 @@ public class PlantGrowingStateMachine : MonoBehaviour
              currentGrowingState.EnterState();
          }
 
-         StateChangedEvent.Invoke(newState,oldState);
+         stateChangedEvent.Invoke(newState,oldState);
      }
 
 

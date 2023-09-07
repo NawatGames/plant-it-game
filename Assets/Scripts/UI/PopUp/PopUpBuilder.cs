@@ -8,7 +8,7 @@ using Vector3 = System.Numerics.Vector3;
 
 public class PopUpBuilder : MonoBehaviour
 {
-    private Camera _camera;
+    private Camera camera;
 
     [SerializeField] private GameObject popUpPrefab;
     [SerializeField] private Transform canvas;
@@ -16,7 +16,7 @@ public class PopUpBuilder : MonoBehaviour
 
     private void Start()
     {
-        _camera = Camera.main;
+        camera = Camera.main;
     }
 
     public PopUp BuildPopUp(TileSelectionHandler tileSelectionHandler)
@@ -27,7 +27,7 @@ public class PopUpBuilder : MonoBehaviour
         GameObject instance = Instantiate(prefab, canvas);
 
         var position = tileSelectionHandler.transform.position;
-        var screenPoint = (Vector2)_camera.WorldToScreenPoint(position) + popUpOffset;
+        var screenPoint = (Vector2)camera.WorldToScreenPoint(position) + popUpOffset;
 
         instance.GetComponent<RectTransform>().anchoredPosition = screenPoint;
         

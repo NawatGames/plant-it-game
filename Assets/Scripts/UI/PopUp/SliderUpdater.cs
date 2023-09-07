@@ -16,9 +16,9 @@ public class SliderUpdater : MonoBehaviour
         popUp.currentTimeChangedEvent.RemoveListener(OnCurrentTimeChanged);
     }
 
-    private void OnCurrentTimeChanged(float arg0)
+    private void OnCurrentTimeChanged(float time)
     {
-        slider.value = arg0;
+        slider.value = time;
     }
     
 }

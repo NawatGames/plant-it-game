@@ -2,10 +2,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class SeasonStateMachine : MonoBehaviour
 {
-    public UnityEvent<SeasonState> StateChangedEvent;
+    public UnityEvent<SeasonState> stateChangedEvent;
     [SerializeField] private SeasonState currentState;
 
     public void SetState(SeasonState newState)
@@ -15,7 +16,7 @@ public class SeasonStateMachine : MonoBehaviour
             currentState.LeaveState();
         }
         currentState = newState;
-        StateChangedEvent.Invoke(newState);
+        stateChangedEvent.Invoke(newState);
         if (currentState != null)
         {
             currentState.EnterState();

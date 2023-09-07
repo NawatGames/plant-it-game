@@ -9,7 +9,7 @@ public class SpriteUpdater : MonoBehaviour
 {
     [SerializeField] private Sprite sprite;
     [SerializeField] private PlantGrowingState growingState;
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private void OnEnable()
     {
@@ -23,7 +23,7 @@ public class SpriteUpdater : MonoBehaviour
 
     public void UpdateSprite()
     {
-        renderer.sprite = sprite;
+        spriteRenderer.sprite = sprite;
     }
 
   

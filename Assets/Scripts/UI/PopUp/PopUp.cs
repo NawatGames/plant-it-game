@@ -22,10 +22,10 @@ public class PopUp : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         mouseExitEvent.Invoke();
-        StartCoroutine(KillPopUPCoroutine());
+        StartCoroutine(KillPopUpCoroutine());
     }
 
-    private IEnumerator KillPopUPCoroutine()
+    private IEnumerator KillPopUpCoroutine()
     {
         var time = 0f;
         while (time < timeToDestroy)

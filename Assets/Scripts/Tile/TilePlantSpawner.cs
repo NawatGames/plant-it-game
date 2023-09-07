@@ -9,12 +9,12 @@ public class TilePlantSpawner : MonoBehaviour
     [SerializeField] private TileStateMachine stateMachine;
     private void OnEnable()
     {
-        stateMachine.StateChangedEvent.AddListener(StateUpdate);
+        stateMachine.stateChangedEvent.AddListener(StateUpdate);
     }
 
     private void OnDisable()
     {
-        stateMachine.StateChangedEvent.RemoveListener(StateUpdate);
+        stateMachine.stateChangedEvent.RemoveListener(StateUpdate);
     }
     
     private void StateUpdate(PlantProfileSO profile)

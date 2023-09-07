@@ -17,9 +17,9 @@ public class PopUpCallerClickConnector : MonoBehaviour
         inputManager.leftButtonChangedEvent.RemoveListener(OnLeftButtonChanged);
     }
     
-    private void OnLeftButtonChanged(bool arg0)
+    private void OnLeftButtonChanged(bool pressed)
     {
-        if (arg0)
+        if (pressed)
         {
             tileSelectionManager.OpenPopUp();
         }

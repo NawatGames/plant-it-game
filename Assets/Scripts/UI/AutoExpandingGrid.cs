@@ -12,7 +12,7 @@ public class AutoExpandingGrid : LayoutGroup
     public Vector2 spacing;
     
     
-    private RectTransform _rectTransform;
+    private RectTransform rectTransform;
     public override void CalculateLayoutInputHorizontal()
     {
         Refresh();
@@ -41,17 +41,17 @@ public class AutoExpandingGrid : LayoutGroup
         }
        
         
-        _rectTransform = GetComponent<RectTransform>();
-        int cells = _rectTransform.childCount;
+        rectTransform = GetComponent<RectTransform>();
+        int cells = rectTransform.childCount;
         Vector2 cellSize;
         int rows = Mathf.CeilToInt(cells / columns);
 
-        cellSize.x = (_rectTransform.rect.width - padding.left - padding.right - (spacing.x * (columns - 1)))/columns;
-        cellSize.y = (_rectTransform.rect.height - padding.top - padding.bottom - (spacing.y * (rows - 1)))/rows;
+        cellSize.x = (rectTransform.rect.width - padding.left - padding.right - (spacing.x * (columns - 1)))/columns;
+        cellSize.y = (rectTransform.rect.height - padding.top - padding.bottom - (spacing.y * (rows - 1)))/rows;
         cellSize.y = cellSize.x;
-        for (int i = 0; i < _rectTransform.childCount; i++)
+        for (int i = 0; i < rectTransform.childCount; i++)
         {
-            RectTransform child = (RectTransform)_rectTransform.GetChild(i);
+            RectTransform child = (RectTransform)rectTransform.GetChild(i);
             var y = i / columns;
             var x = i - y * columns ;
             var positionY = padding.top + (cellSize.y * y) + (y * spacing.y) + (cellSize.y) / 2;

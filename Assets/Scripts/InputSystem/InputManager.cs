@@ -15,7 +15,7 @@ namespace InputSystem
 {
     public class InputManager : MonoBehaviour{
         
-        public UnityEvent<bool> leftButtonChangedEvent;
+       public UnityEvent<bool> leftButtonChangedEvent;
        public UnityEvent<bool> rightButtonChangedEvent;
        public UnityEvent<bool> middleButtonChangedEvent;
        public UnityEvent<Vector2> mouseMovementEvent;
@@ -44,11 +44,8 @@ namespace InputSystem
            
            controls.Player.MousePos.performed += OnMouseMovement;
            
-
-           
            controls.Player.MouseDelta.performed += OnMouseDelta;
            controls.Player.MouseDelta.canceled += OnMouseDelta;
-           
            
            controls.Player.Scroll.performed += OnScrollMovement;
        }
@@ -56,11 +53,14 @@ namespace InputSystem
        private void OnLeftButtonChanged(InputAction.CallbackContext context)
        {
            if (leftButtonChangedEvent == null) return;
+           
            InputActionPhase phase = context.phase;
+           
            if (phase == InputActionPhase.Performed)
            {
                leftButtonChangedEvent.Invoke(true);
            }
+           
            else if (phase == InputActionPhase.Canceled)
            {
                leftButtonChangedEvent.Invoke(false);
@@ -70,8 +70,10 @@ namespace InputSystem
        private void OnRightButtonChanged(InputAction.CallbackContext context)
        {
            if (rightButtonChangedEvent == null) return;
+           
            rightButtonChangedEvent.Invoke(true);
            InputActionPhase phase = context.phase;
+           
            if (phase == InputActionPhase.Performed)
            {
                rightButtonChangedEvent.Invoke(true);
@@ -85,8 +87,10 @@ namespace InputSystem
        private void OnLeftMiddleChanged(InputAction.CallbackContext context)
        {
            if (middleButtonChangedEvent == null) return;
+           
            middleButtonChangedEvent.Invoke(true);
            InputActionPhase phase = context.phase;
+           
            if (phase == InputActionPhase.Performed)
            {
                middleButtonChangedEvent.Invoke(true);
