@@ -44,7 +44,12 @@ public class PlantLifeStateMachine : MonoBehaviour
         private void SetNextState()
         {
             ChangeState(nextState);
-        } 
+        }
+
+        public void SetState(PlantLifeState hibernatingState)
+        {
+            throw new System.NotImplementedException();
+        }
 }
 
 
