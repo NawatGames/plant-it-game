@@ -40,10 +40,14 @@ public class PlantLifeStateMachine : MonoBehaviour
         stateChangedEvent.Invoke(newState, oldState);
     }
 
-
     [ContextMenu("SetNextState")]
     private void SetNextState()
     {
         ChangeState(nextState);
+    }
+
+    public void SetState(PlantLifeState hibernatingState)
+    {
+        throw new System.NotImplementedException();
     }
 }
