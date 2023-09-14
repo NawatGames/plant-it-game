@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LifeStateTransition : MonoBehaviour
 {
+    [SerializeField] protected PlantLifeState fromState;
     [SerializeField] protected PlantLifeStateMachine lifeStateMachine;
     protected PlantLifeState growing;
     protected PlantLifeState hibernating;
@@ -21,5 +22,27 @@ public class LifeStateTransition : MonoBehaviour
         dying = lifeStateMachine.gameObject.transform.Find("Dying").GetComponent<PlantLifeState>();
         ripe = lifeStateMachine.gameObject.transform.Find("Ripe").GetComponent<PlantLifeState>();
         dead = lifeStateMachine.gameObject.transform.Find("Dead").GetComponent<PlantLifeState>();
+    }
+
+    protected virtual void OnEnable()
+    {
+        fromState.stateEnteredEvent.AddListener(OnStateEntered);
+        fromState.stateLeavedEvent.AddListener(OnStateLeaved);
+    }
+    
+    protected virtual void OnDisable()
+    {
+        fromState.stateEnteredEvent.AddListener(OnStateEntered);
+        fromState.stateLeavedEvent.AddListener(OnStateLeaved);
+    }
+
+    protected virtual void OnStateEntered()
+    {
+        
+    }
+
+    protected virtual void OnStateLeaved()
+    {
+        
     }
 }
