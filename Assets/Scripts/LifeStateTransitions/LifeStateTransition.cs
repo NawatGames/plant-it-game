@@ -27,13 +27,13 @@ public class LifeStateTransition : MonoBehaviour
     protected virtual void OnEnable()
     {
         fromState.stateEnteredEvent.AddListener(OnStateEntered);
-        fromState.stateLeavedEvent.AddListener(OnStateLeaved);
+        fromState.stateLeavedEvent.AddListener(OnStateLeft);
     }
     
     protected virtual void OnDisable()
     {
         fromState.stateEnteredEvent.AddListener(OnStateEntered);
-        fromState.stateLeavedEvent.AddListener(OnStateLeaved);
+        fromState.stateLeavedEvent.AddListener(OnStateLeft);
     }
 
     protected virtual void OnStateEntered()
@@ -41,7 +41,7 @@ public class LifeStateTransition : MonoBehaviour
         
     }
 
-    protected virtual void OnStateLeaved()
+    protected virtual void OnStateLeft()
     {
         
     }

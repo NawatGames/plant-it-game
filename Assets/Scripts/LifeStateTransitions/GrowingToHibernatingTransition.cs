@@ -10,7 +10,7 @@ public class GrowingToHibernatingTransition : LifeStateTransition
         sleepinessMeter.amountChangedEvent.AddListener(OnSleepinessMeterAmountChanged);
     }
 
-    protected override void OnStateLeaved()
+    protected override void OnStateLeft()
     {
         sleepinessMeter.amountChangedEvent.RemoveListener(OnSleepinessMeterAmountChanged);
     }
