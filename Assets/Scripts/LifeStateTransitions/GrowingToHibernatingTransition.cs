@@ -4,7 +4,6 @@ using UnityEngine;
 public class GrowingToHibernatingTransition : LifeStateTransition
 {
     [SerializeField] SleepinessMeter sleepinessMeter;
-    [SerializeField] float maxSleepiness = .9f;
     
     protected override void OnStateEntered()
     {
@@ -18,7 +17,7 @@ public class GrowingToHibernatingTransition : LifeStateTransition
 
     private void OnSleepinessMeterAmountChanged(float amount)
     {
-        if (amount < maxSleepiness) return;
+        if (amount < 1f) return;
         lifeStateMachine.SetState(hibernating);
     }
 }
