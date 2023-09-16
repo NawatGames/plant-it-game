@@ -10,9 +10,9 @@ public class TileNutrient : MonoBehaviour
 
     public UnityEvent<float> amountChangedEvent;
 
-    public void SetAmmount(float ammount)
+    public void SetAmount(float amount)
     {
-        currentAmount = Mathf.Clamp01(ammount);
+        currentAmount = Mathf.Clamp01(amount);
         amountChangedEvent.Invoke(currentAmount);
     }
 
@@ -32,6 +32,6 @@ public class TileNutrient : MonoBehaviour
     private void Update()
     {
         var deltaTime = speed * Time.deltaTime;
-        SetAmmount(currentAmount - deltaTime);
+        SetAmount(currentAmount - deltaTime);
     }
 }

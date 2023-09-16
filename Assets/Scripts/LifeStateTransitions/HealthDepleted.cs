@@ -5,6 +5,7 @@ public class HealthDepleted : LifeStateTransition
     // Transitions when health reaches 0
     // Hibernating -> Dead
     // Ripe -> Decomposed
+    // Growing -> Dead
     // Dying -> Dead
     [SerializeField] private PlantStat health;
     [SerializeField] private PlantLifeState toState;
