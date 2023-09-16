@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LifeStateTransitions
 {
-    public class GrowingToRipe : LifeStateTransition
+    public class ToRipe : LifeStateTransition
     {
         [SerializeField] private PlantLifeState lastState;
 
