@@ -8,12 +8,17 @@ namespace LifeStateTransitions
 
         protected override void OnStateEntered()
         {
-            base.OnStateEntered();
+            lastState.stateEnteredEvent.AddListener(OnLastStateEnter);
         }
 
         protected override void OnStateLeft()
         {
-            
+            lastState.stateEnteredEvent.RemoveListener(OnLastStateEnter);
+        }
+
+        private void OnLastStateEnter()
+        {
+            lifeStateMachine.SetState(ripe);
         }
     }
 }
