@@ -4,16 +4,16 @@ namespace LifeStateTransitions
 {
     public class ToRipe : LifeStateTransition
     {
-        [SerializeField] private PlantLifeState lastState;
+        [SerializeField] private PlantGrowingState lastGrowingState;
 
         protected override void OnStateEntered()
         {
-            lastState.stateEnteredEvent.AddListener(OnLastStateEnter);
+            lastGrowingState.stateEnteredEvent.AddListener(OnLastStateEnter);
         }
 
         protected override void OnStateLeft()
         {
-            lastState.stateEnteredEvent.RemoveListener(OnLastStateEnter);
+            lastGrowingState.stateEnteredEvent.RemoveListener(OnLastStateEnter);
         }
 
         private void OnLastStateEnter()

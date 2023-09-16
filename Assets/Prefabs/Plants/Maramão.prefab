@@ -530,10 +530,22 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7968440cde067db1d966d401b2935491, type: 3}
+    - target: {fileID: 2706479469032872735, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 3921591822945568474}
+    - target: {fileID: 3036063525662816586, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 3921591822945568474}
     - target: {fileID: 3846373831102816164, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: e03ef54d918a8f75f96c682ba3f659cf, type: 3}
+    - target: {fileID: 3904432239826948748, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 3921591822945568474}
     - target: {fileID: 4076927810822489425, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: stateLeavedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -862,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 3067945130799990934}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
@@ -890,7 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 3109739120183189937}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
@@ -973,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 1696489017986294257}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
@@ -997,7 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 1254903431208035493}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
@@ -1025,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 8537670150919872726}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
@@ -1049,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7309594429481749867}
+  spriteRenderer: {fileID: 0}
   plantLifeState: {fileID: 8134153147500559333}
   plantLifeStateMachine: {fileID: 6756586853897047286}
   plantGrowingStateMachine: {fileID: 3053636417157100727}
