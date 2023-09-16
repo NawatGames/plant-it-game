@@ -4,7 +4,7 @@ namespace LifeStateTransitions
 {
     public class HibernatingToGrowingTransition : LifeStateTransition
     {
-        [SerializeField] SleepinessMeter sleepinessMeter;
+        [SerializeField] PlantStat sleepinessMeter;
         
         protected override void OnStateEntered()
         {

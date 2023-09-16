@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832647900841901131}
-  - component: {fileID: 6707713091372462523}
+  - component: {fileID: 4480951914862181600}
   m_Layer: 0
   m_Name: Sleepiness
   m_TagString: Untagged
@@ -151,7 +151,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8760214623676493623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6707713091372462523
+--- !u!114 &4480951914862181600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6253075978536820757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e82e70ac8a8e34f9b4b5808de32494, type: 3}
+  m_Script: {fileID: 11500000, guid: 184bedba33c84b0daa41b1be97b3c4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAmmount: 0
-  AmmountChangedEvent:
+  currentAmount: 0
+  amountChangedEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6470057408164922110
@@ -264,21 +264,9 @@ MonoBehaviour:
   currentGrowingState: {fileID: 0}
   initialState: {fileID: 0}
   nextState: {fileID: 0}
-  StateChangedEvent:
+  stateChangedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6820789233453801985}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8384999243324852060
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +320,7 @@ MonoBehaviour:
   currentLifeState: {fileID: 0}
   initialState: {fileID: 0}
   nextState: {fileID: 0}
-  StateChangedEvent:
+  stateChangedEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8619062876892920942
@@ -414,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8570f2927386440abea83e9a0efb438b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sleepiness: {fileID: 6707713091372462523}
+  sleepiness: {fileID: 4480951914862181600}
   lifeStateMachine: {fileID: 8375094185362271490}
   hibernatingState: {fileID: 4076927810822489425}
   maxSleepiness: 0.9

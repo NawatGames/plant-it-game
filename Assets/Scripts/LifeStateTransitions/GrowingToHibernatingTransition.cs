@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GrowingToHibernatingTransition : LifeStateTransition
 {
-    [SerializeField] SleepinessMeter sleepinessMeter;
+    [SerializeField] PlantStat sleepinessMeter;
     
     protected override void OnStateEntered()
     {
