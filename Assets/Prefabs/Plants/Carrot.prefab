@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: a1bcb778f64b1ca5381b6a0eba9ce9d2, type: 3}
+    - target: {fileID: 7891297576133937299, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: currentAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8375094185362271490, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

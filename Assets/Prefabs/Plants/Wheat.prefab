@@ -908,6 +908,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7b70b3809ed3bcad68fc3ebf79a59840, type: 3}
+    - target: {fileID: 7891297576133937299, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: currentAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8619062876892920942, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: m_Name
       value: Wheat
