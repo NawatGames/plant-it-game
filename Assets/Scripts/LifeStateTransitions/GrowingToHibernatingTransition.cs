@@ -18,6 +18,6 @@ public class GrowingToHibernatingTransition : LifeStateTransition
     private void OnSleepinessMeterAmountChanged(float amount)
     {
         if (amount < 1f) return;
-        lifeStateMachine.SetState(hibernating);
+        lifeStateMachine.ChangeState(hibernating);
     }
 }

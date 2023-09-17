@@ -19,7 +19,7 @@ namespace LifeStateTransitions
         private void OnSleepinessMeterAmountChanged(float amount)
         {
             if (amount > 0) return;
-            lifeStateMachine.SetState(growing);
+            lifeStateMachine.ChangeState(growing);
         }
     }
 }

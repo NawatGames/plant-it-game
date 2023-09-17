@@ -18,7 +18,7 @@ namespace LifeStateTransitions
 
         private void OnLastStateEnter()
         {
-            lifeStateMachine.SetState(ripe);
+            lifeStateMachine.ChangeState(ripe);
         }
     }
 }

@@ -22,6 +22,6 @@ public class HealthDepleted : LifeStateTransition
     private void OnHealthAmountChanged(float amount)
     {
         if (amount > 0) return;
-        lifeStateMachine.SetState(toState);
+        lifeStateMachine.ChangeState(toState);
     }
 }
