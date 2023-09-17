@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184bedba33c84b0daa41b1be97b3c4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAmount: 0
+  currentAmount: 0.501
   amountChangedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLifeState: {fileID: 0}
-  initialState: {fileID: 0}
+  initialState: {fileID: 247134946636310882}
   nextState: {fileID: 0}
   stateChangedEvent:
     m_PersistentCalls:
@@ -523,6 +523,10 @@ PrefabInstance:
     - target: {fileID: 845625092581414854, guid: d029c7c4b361a61e1a6b70417ef21434, type: 3}
       propertyPath: m_Name
       value: HibernationAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 845625092581414854, guid: d029c7c4b361a61e1a6b70417ef21434, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4921819691715755888, guid: d029c7c4b361a61e1a6b70417ef21434, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1174,6 +1178,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f64afbe84cdcf4414a99f678884e3cee, type: 3}
+--- !u!114 &247134946636310882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7726534735914587875, guid: f64afbe84cdcf4414a99f678884e3cee, type: 3}
+  m_PrefabInstance: {fileID: 7518712897895169921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &488342400973768450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7967190279943747715, guid: f64afbe84cdcf4414a99f678884e3cee, type: 3}
