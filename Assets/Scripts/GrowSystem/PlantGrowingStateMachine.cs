@@ -1,7 +1,6 @@
 ﻿using System;
 using Unity.Collections;
 using Unity.VisualScripting;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
