@@ -160,10 +160,22 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: cbc8acf94c69eff2e9463b09324402b0, type: 3}
+    - target: {fileID: 2706479469032872735, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 2903893144294070193}
+    - target: {fileID: 3036063525662816586, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 2903893144294070193}
     - target: {fileID: 3846373831102816164, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: 886f53e7c0dece7d0a509d77152ba9e4, type: 3}
+    - target: {fileID: 3904432239826948748, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: lastGrowingState
+      value: 
+      objectReference: {fileID: 2903893144294070193}
     - target: {fileID: 4076927810822489425, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: stateLeavedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -440,6 +452,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300000, guid: a1bcb778f64b1ca5381b6a0eba9ce9d2, type: 3}
+    - target: {fileID: 7891297576133937299, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: currentAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8375094185362271490, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -525,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 2338081818981981474}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
@@ -551,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 2434491991487607813}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
@@ -632,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 2076627271035346274}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
@@ -656,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 1887248228287322166}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
@@ -682,7 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 9016610536021236805}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
@@ -722,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac98805207ca6164aaac2ec071c50a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 7938279484945396216}
+  spriteRenderer: {fileID: 7938279484945396216}
   plantLifeState: {fileID: 8915116765721823094}
   plantLifeStateMachine: {fileID: 6241634715414327397}
   plantGrowingStateMachine: {fileID: 2394288146990204964}
