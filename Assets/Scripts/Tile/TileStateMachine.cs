@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class TileStateMachine : MonoBehaviour
 {
     [SerializeField][ReadOnly] private PlantProfileSO currentProfileSo;
-    public UnityEvent<PlantProfileSO, PlantProfileSO> stateChangedEvent;
+    public UnityEvent<PlantProfileSO> stateChangedEvent;
     [SerializeField][ReadOnlyOnPlay] private PlantProfileSO initialProfileSo;
     [SerializeField] private PlantProfileSO nextProfile;
     
@@ -21,7 +21,7 @@ public class TileStateMachine : MonoBehaviour
     }
     public void SetProfile(PlantProfileSO newProfile)
     {
-        var oldstate = currentProfileSo;
+        
         if (currentProfileSo != null)
         {
             currentProfileSo.plantUnselectEvent.Invoke();
@@ -29,7 +29,7 @@ public class TileStateMachine : MonoBehaviour
 
         currentProfileSo = newProfile;
 
-        stateChangedEvent.Invoke(newProfile, oldstate);
+        stateChangedEvent.Invoke(newProfile);
 
         if (currentProfileSo != null)
         {

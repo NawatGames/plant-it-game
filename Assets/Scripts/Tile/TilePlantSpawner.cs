@@ -18,6 +18,8 @@ public class TilePlantSpawner : MonoBehaviour
         stateMachine.stateChangedEvent.RemoveListener(StateUpdate);
     }
 
+
+
     private void StateUpdate(PlantProfileSO profile)
     {
         GameObject plant = Instantiate(profile.prefab);
