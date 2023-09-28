@@ -1,4 +1,5 @@
 ﻿using System;
+using KevinCastejon.MoreAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,9 +8,9 @@ using UnityEngine.Serialization;
 public class ScreenStateMachines : MonoBehaviour
 {
     public UnityEvent<ScreenState> stateChangedEvent;
-    private ScreenState currentState;
+    [SerializeField][ReadOnly] private ScreenState currentState;
     [SerializeField] private ScreenState nextState;
-    [SerializeField] private ScreenState initialState;
+    [SerializeField][ReadOnlyOnPlay] private ScreenState initialState;
 
     public void Start()
     {
