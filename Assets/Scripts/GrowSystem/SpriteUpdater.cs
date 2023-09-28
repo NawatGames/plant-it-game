@@ -13,12 +13,12 @@ public class SpriteUpdater : MonoBehaviour
 
     private void OnEnable()
     {
-        growingState.stateEnteredEvent.AddListener(UpdateSprite);
+        growingState.stateEnterEvent.AddListener(UpdateSprite);
     }
 
     private void OnDisable()
     {
-        growingState.stateEnteredEvent.RemoveListener(UpdateSprite);
+        growingState.stateEnterEvent.RemoveListener(UpdateSprite);
     }
 
     public void UpdateSprite()

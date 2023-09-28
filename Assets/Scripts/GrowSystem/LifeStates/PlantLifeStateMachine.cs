@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
+using KevinCastejon.MoreAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class PlantLifeStateMachine : MonoBehaviour
 {
-    [SerializeField] private PlantLifeState currentLifeState;
-    [SerializeField] private PlantLifeState initialState;
+    [SerializeField][ReadOnly] private PlantLifeState currentLifeState;
+    [SerializeField][ReadOnlyOnPlay] private PlantLifeState initialState;
     [SerializeField] private PlantLifeState nextState;
 
     public UnityEvent<PlantLifeState, PlantLifeState> stateChangedEvent;
