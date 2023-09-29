@@ -1,5 +1,5 @@
 ﻿using System;
-using Unity.Collections;
+using KevinCastejon.MoreAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,8 +7,8 @@ using UnityEngine.Serialization;
 
 public class PlantGrowingStateMachine : MonoBehaviour
 {
-    [SerializeField] private PlantGrowingState currentGrowingState;
-    [SerializeField] private PlantGrowingState initialState;
+    [SerializeField][ReadOnly] private PlantGrowingState currentGrowingState;
+    [SerializeField][ReadOnlyOnPlay] private PlantGrowingState initialState;
     [SerializeField] private PlantGrowingState nextState;
 
     public UnityEvent<PlantGrowingState, PlantGrowingState> stateChangedEvent;
@@ -27,7 +27,7 @@ public class PlantGrowingStateMachine : MonoBehaviour
 
         if (currentGrowingState != null)
         {
-            currentGrowingState.LeaveState();
+            currentGrowingState.ExitState();
         }
 
         currentGrowingState = newState;
@@ -39,7 +39,11 @@ public class PlantGrowingStateMachine : MonoBehaviour
 
         stateChangedEvent.Invoke(newState, oldState);
     }
-
+    
+    public PlantGrowingState GetState()
+    {
+        return currentGrowingState;
+    }
 
     [ContextMenu("SetNextState")]
     private void SetNextState()

@@ -9,15 +9,14 @@ public class ScreenState : MonoBehaviour
 {
     public UnityEvent stateEnteredEvent;
     public UnityEvent stateLeavedEvent;
-
-    public void EnterState()
-    {
+		
+    [ContextMenu("OnEnterState")]
+    public virtual void EnterState(){
         stateEnteredEvent.Invoke();
     }
 
-
-    public void LeaveState()
-    {
+    [ContextMenu("OnExitState")]
+    public virtual void LeaveState(){
         stateLeavedEvent.Invoke();
     }
 }

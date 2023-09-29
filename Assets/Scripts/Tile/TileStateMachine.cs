@@ -1,32 +1,48 @@
 using System;
+using KevinCastejon.MoreAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class TileStateMachine : MonoBehaviour
 {
-    [SerializeField] private PlantProfileSO currentProfileSO;
+    [SerializeField][ReadOnly] private PlantProfileSO currentProfileSo;
     public UnityEvent<PlantProfileSO> stateChangedEvent;
-
+    [SerializeField][ReadOnlyOnPlay] private PlantProfileSO initialProfileSo;
+    [SerializeField] private PlantProfileSO nextProfile;
+    
+    public void Start()
+    {
+        if (initialProfileSo != null)
+        {
+            SetProfile(initialProfileSo);
+        }
+    }
     public void SetProfile(PlantProfileSO newProfile)
     {
-        if (currentProfileSO != null)
+        
+        if (currentProfileSo != null)
         {
-            currentProfileSO.plantUnselectEvent.Invoke();
+            currentProfileSo.plantUnselectEvent.Invoke();
         }
 
-        currentProfileSO = newProfile;
+        currentProfileSo = newProfile;
 
         stateChangedEvent.Invoke(newProfile);
 
-        if (currentProfileSO != null)
+        if (currentProfileSo != null)
         {
-            currentProfileSO.plantSelectEvent.Invoke();
+            currentProfileSo.plantSelectEvent.Invoke();
         }
     }
 
     public PlantProfileSO GetProfile()
     {
-        return currentProfileSO;
+        return currentProfileSo;
+    }
+    [ContextMenu("SetNextState")]
+    private void SetNextState(){
+        SetProfile(nextProfile);
     }
 }

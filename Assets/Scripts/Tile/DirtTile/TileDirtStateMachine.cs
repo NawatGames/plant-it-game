@@ -1,35 +1,54 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using KevinCastejon.MoreAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.WSA;
 
 namespace DirtTile
 {
     public class TileDirtStateMachine : MonoBehaviour
     {
-        [SerializeField] private TileDirtState currentState;
-        public UnityEvent<TileDirtState> currentStateChangedEvent;
-
-        public void SetState(TileDirtState newState)
+        [SerializeField][ReadOnly] private TileDirtState currentState;
+        [SerializeField][ReadOnlyOnPlay] private TileDirtState initialState;
+        [SerializeField] private TileDirtState nextState;
+        public UnityEvent<TileDirtState, TileDirtState> currentStateChangedEvent;
+        
+        public void Start()
         {
+            if (initialState != null)
+            {
+                SetState(initialState);
+            }
+        }
+        public void SetState(TileDirtState newState)
+        {   
+            var oldState = currentState;
+            
             if (currentState != null)
             {
-                currentState.Leave();
+                currentState.ExitState();
             }
 
             currentState = newState;
+            
             if (currentState != null)
             {
-                currentState.Enter();
+                currentState.EnterState();
             }
 
-            currentStateChangedEvent.Invoke(currentState);
+            currentStateChangedEvent.Invoke(newState, oldState);
         }
 
         public TileDirtState GetState()
         {
             return currentState;
+        }
+        
+        [ContextMenu("SetNextState")]
+        private void SetNextState(){
+            SetState(nextState);
         }
 
         /*private void Update()

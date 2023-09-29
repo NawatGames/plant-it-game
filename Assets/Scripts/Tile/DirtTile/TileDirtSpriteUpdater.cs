@@ -11,12 +11,12 @@ namespace DirtTile
 
         private void OnEnable()
         {
-            tileDirtState.enterEvent.AddListener(OnEnter);
+            tileDirtState.StateEnterEvent.AddListener(OnEnter);
         }
 
         private void OnDisable()
         {
-            tileDirtState.enterEvent.RemoveListener(OnEnter);
+            tileDirtState.StateEnterEvent.RemoveListener(OnEnter);
         }
 
         private void OnEnter()
