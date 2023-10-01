@@ -40,6 +40,11 @@ public class PlantLifeStateMachine : MonoBehaviour
         stateChangedEvent.Invoke(newState, oldState);
     }
 
+    public PlantLifeState GetState()
+    {
+        return currentLifeState;
+    }
+
     [ContextMenu("SetNextState")]
     private void SetNextState()
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using InventorySystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ namespace UI.Inventory
     {
         [SerializeField] private Button button;
         [SerializeField] private ItemProfileSO itemProfileSo;
-        [SerializeField] private InventoryItemSelectionManager inventoryItemSelectionManager;
+        [FormerlySerializedAs("inventoryItemSelectionManager")] [SerializeField] private ItemSelectionManager itemSelectionManager;
         
         private void OnEnable()
         {
@@ -23,7 +24,7 @@ namespace UI.Inventory
 
         void OnButtonClick()
         {
-            inventoryItemSelectionManager.SetState(itemProfileSo);
+            itemSelectionManager.SetState(itemProfileSo);
         }
     }
 }

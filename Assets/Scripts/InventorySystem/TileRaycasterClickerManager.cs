@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using InputSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-
-namespace UI.Inventory
+namespace InventorySystem
 {
     /// <summary>
     /// Fica ativado quando entrar no modo de uso de item (screen state)
     /// Habita na cena
     /// </summary>
-    public class InventoryTileRaycasterClickerManager : MonoBehaviour
+    public class TileRaycasterClickerManager : MonoBehaviour
     {
         private InputManager _inputManager;
         private Vector2 mousePosition;

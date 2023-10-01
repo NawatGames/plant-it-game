@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace UI.Inventory
+namespace Tile.Inventory
 {
     public class InventoryTileClicker : MonoBehaviour
     {

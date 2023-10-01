@@ -21,11 +21,13 @@ public class TileSpawner : MonoBehaviour
         }
     }
 
-    Tile SpawnTile(Vector2Int point)
+    TileHandler SpawnTile(Vector2Int point)
     {
         Vector3 position = tilemap.CellToWorld((Vector3Int)point);
         GameObject clone = Instantiate(tilePrefab, position, Quaternion.identity);
         clone.transform.parent = root.transform;
-        return clone.GetComponent<Tile>();
+        TileHandler handler = clone.GetComponent<TileHandler>();
+        if(handler == null) throw new Exception("TileHandler não encontrado");
+        return handler;
     }
 }

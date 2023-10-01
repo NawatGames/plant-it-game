@@ -1,8 +1,8 @@
-﻿using System;
+﻿using InventorySystem;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UI.Inventory
+namespace Tile.Inventory
 {
     /// <summary>
     /// Habita o tile
@@ -12,12 +12,12 @@ namespace UI.Inventory
     {
         [SerializeField] private InventoryTileClicker tileClicker;
         [SerializeField] private TileHandler tileHandler;
-        private InventoryItemSelectionManager _selectionManager;
+        private ItemSelectionManager _selectionManager;
         public UnityEvent itemUseSuccess;
         public UnityEvent itemUseFail;
         private void Awake()
         {
-            _selectionManager = GameObject.FindFirstObjectByType<InventoryItemSelectionManager>();
+            _selectionManager = GameObject.FindFirstObjectByType<ItemSelectionManager>();
         }
         private void OnEnable()
         {

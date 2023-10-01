@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace UI.Inventory
+namespace InventorySystem
 {
-    public class InventoryItemSelectionManager : MonoBehaviour
+    public class ItemSelectionManager : MonoBehaviour
     {
         // Responsável por selecionar um item
         // State machine para guardar o item/ferramente selecionado
