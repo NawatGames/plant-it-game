@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Profile/Item", fileName = "New Profile")]
+[CreateAssetMenu(menuName = "Profile/Blank Item", fileName = "New Profile")]
 public class ItemProfileSO : ScriptableObject
 {
     public GameObject prefab;
