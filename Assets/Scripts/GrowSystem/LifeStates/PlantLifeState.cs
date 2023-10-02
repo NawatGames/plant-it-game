@@ -9,15 +9,14 @@ public class PlantLifeState : MonoBehaviour
 {
     public UnityEvent stateEnteredEvent;
     public UnityEvent stateLeavedEvent;
-
-    public virtual void EnterState()
-    {
+		
+    [ContextMenu("OnEnterState")]
+    public virtual void EnterState(){
         stateEnteredEvent.Invoke();
     }
 
-
-    public virtual void LeaveState()
-    {
+    [ContextMenu("OnExitState")]
+    public virtual void LeaveState(){
         stateLeavedEvent.Invoke();
     }
 }

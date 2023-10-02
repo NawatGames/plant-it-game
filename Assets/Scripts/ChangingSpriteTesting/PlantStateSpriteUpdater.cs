@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 namespace ChangingSpriteTesting
 {
     [Serializable]
-    public class PlantInfo
+    public class PlantSpriteInfo
     {
         public PlantGrowingState plantGrowingState;
         public Sprite sprite;
@@ -18,7 +18,7 @@ namespace ChangingSpriteTesting
         [SerializeField] private PlantLifeState plantLifeState;
         [SerializeField] private PlantLifeStateMachine plantLifeStateMachine;
         [SerializeField] private PlantGrowingStateMachine plantGrowingStateMachine;
-        [SerializeField] private List<PlantInfo> plantInfosList;
+        [SerializeField] private List<PlantSpriteInfo> plantInfosList;
 
         Dictionary<PlantGrowingState, Sprite> plantInfosDictionary = new Dictionary<PlantGrowingState, Sprite>();
         private PlantGrowingState plantGrowingState;

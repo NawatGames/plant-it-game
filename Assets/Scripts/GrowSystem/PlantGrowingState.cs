@@ -7,17 +7,17 @@ using UnityEngine.Events;
 
 public class PlantGrowingState : MonoBehaviour
 {
-    public UnityEvent stateEnteredEvent;
-    public UnityEvent stateLeavedEvent;
-
-    public virtual void EnterState()
-    {
-        stateEnteredEvent.Invoke();
+    public UnityEvent stateEnterEvent;
+    public UnityEvent stateExitEvent;
+		
+    [ContextMenu("OnEnterState")]
+    public virtual void EnterState(){
+        stateEnterEvent.Invoke();
     }
 
-    public virtual void LeaveState()
-    {
-        stateLeavedEvent.Invoke();
+    [ContextMenu("OnExitState")]
+    public virtual void ExitState(){
+        stateExitEvent.Invoke();
     }
 }
 
