@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6232767960378548679}
   - component: {fileID: 2677174549201856124}
   m_Layer: 0
-  m_Name: HibernationAnimation
+  m_Name: HibernationParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
