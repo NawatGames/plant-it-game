@@ -11,5 +11,10 @@ public class TileReference : MonoBehaviour
         if(handlerUpdateEvent == null) return;
         handlerUpdateEvent.Invoke(newHandler);
         handler = newHandler;
-    }   
+    }
+
+    public TileHandler GetHandler()
+    {
+        return handler;
+    }
 }
