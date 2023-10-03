@@ -2,7 +2,7 @@
 
 namespace LifeStateTransitions
 {
-    public class DyingToGrowing : DyingToHibernating
+    public class DyingToGrowing : NutrientDependantTransition
     {
         [SerializeField] private PlantStat sleepinessStat;
         protected override void OnNutrientAmountChangedEvent(float amount)
