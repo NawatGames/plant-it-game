@@ -17,7 +17,8 @@ public class GrowingToHibernatingTransition : LifeStateTransition
 
     private void OnSleepinessMeterAmountChanged(float amount)
     {
-        if (amount < 1f) return;
+        // Returns if sleepiness meter is below treshold
+        if(sleepinessMeter.BelowTreshold()) return;
         lifeStateMachine.ChangeState(hibernating);
     }
 }

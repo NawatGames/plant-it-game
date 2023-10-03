@@ -18,7 +18,9 @@ namespace LifeStateTransitions
         
         private void OnSleepinessMeterAmountChanged(float amount)
         {
-            if (amount > 0) return;
+            // Returns if sleepiness meter is above treshold
+            if (sleepinessMeter.AboveTreshold()) return;
+            // If sleepiness is below treshold, change state to growing
             lifeStateMachine.ChangeState(growing);
         }
     }
