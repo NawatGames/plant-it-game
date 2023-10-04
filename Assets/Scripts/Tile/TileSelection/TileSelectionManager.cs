@@ -12,6 +12,8 @@ public class TileSelectionManager : MonoBehaviour
     private Vector2 _mousePosition;
     private TileSelectionHandler _currentTileSelectionHandler;
     public UnityEvent<TileSelectionHandler> currentTilePopUpHandlerChangedEvent;
+    public UnityEvent popUpClosedEvent;
+    public UnityEvent<PopUp> popUpOpenedEvent;
     [SerializeField] private PopUpBuilder popUpBuilder;
     private PopUp _buildPopUp;
 
@@ -41,12 +43,14 @@ public class TileSelectionManager : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
             tilePopUpHandler = hitObject.GetComponent<TileSelectionHandler>();
         }
-
         SetTilePopUpHandle(tilePopUpHandler);
     }
 
     private void SetTilePopUpHandle(TileSelectionHandler tileSelectionHandler)
     {
+        print(tileSelectionHandler);
+        print(_currentTileSelectionHandler);
+        
         if (tileSelectionHandler == _currentTileSelectionHandler)
         {
             return;
@@ -56,7 +60,7 @@ public class TileSelectionManager : MonoBehaviour
         {
             _currentTileSelectionHandler.Unselect();
         }
-
+        
         if (_buildPopUp != null)
         {
             _buildPopUp.destroyPopUpEvent.RemoveListener(OnPopUpClosed);
@@ -64,11 +68,12 @@ public class TileSelectionManager : MonoBehaviour
         }
 
         _currentTileSelectionHandler = tileSelectionHandler;
+        print(_currentTileSelectionHandler);
         if (_currentTileSelectionHandler != null)
         {
             _currentTileSelectionHandler.Select();
         }
-
+        
         currentTilePopUpHandlerChangedEvent.Invoke(tileSelectionHandler);
         if (tileSelectionHandler == null)
         {
@@ -76,12 +81,14 @@ public class TileSelectionManager : MonoBehaviour
         }
 
         _buildPopUp = popUpBuilder.BuildPopUp(tileSelectionHandler);
+        popUpOpenedEvent.Invoke(_buildPopUp);
         _buildPopUp.destroyPopUpEvent.AddListener(OnPopUpClosed);
     }
 
     public void OnPopUpClosed()
     {
         SetTilePopUpHandle(null);
+        popUpClosedEvent.Invoke();
     }
 
     private void OnMouseMovement(Vector2 arg0)
