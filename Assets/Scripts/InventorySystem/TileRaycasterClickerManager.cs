@@ -61,11 +61,13 @@ namespace InventorySystem
                 if (handler != null)
                 {
                     HandlerFailEvent.Invoke();
+                    Debug.Log("TileRaycasterClickerManager: TileHandler not found");
                 }
                 else
                 {
                     handler.tileClicker.Click();
                     HandlerSuccessEvent.Invoke();
+                    Debug.Log("TileRaycasterClickerManager: TileHandler found");
                 }
             }
         }

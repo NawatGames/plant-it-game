@@ -35,10 +35,12 @@ namespace Tile.Inventory
             {
                 profile.InteractWith(tileHandler);
                 itemUseSuccess.Invoke();
+                Debug.Log("Item use success");
             }
             else
             {
                 itemUseFail.Invoke();
+                Debug.Log("Item use fail");
             }
         }
     }

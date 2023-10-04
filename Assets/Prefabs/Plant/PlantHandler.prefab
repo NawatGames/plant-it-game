@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6811326059622225825}
   - component: {fileID: 2922687167242733986}
-  - component: {fileID: 8406059624327659722}
   m_Layer: 0
   m_Name: PlantHandler
   m_TagString: Untagged
@@ -46,19 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantLifeStateMachine: {fileID: 2144494919279862784, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
---- !u!114 &8406059624327659722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6668337234348978915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dc99e6681b046c382e2d7b077c547e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handler: {fileID: 2210357863298739835, guid: 6c7528a375e556c4297226072301a2c0, type: 3}
-  handlerUpdateEvent:
-    m_PersistentCalls:
-      m_Calls: []
