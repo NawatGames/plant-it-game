@@ -11,12 +11,14 @@ public class PlantGrowingState : MonoBehaviour
     public UnityEvent stateExitEvent;
 		
     [ContextMenu("OnEnterState")]
-    public virtual void EnterState(){
+    public virtual void EnterState()
+    {
         stateEnterEvent.Invoke();
     }
 
     [ContextMenu("OnExitState")]
-    public virtual void ExitState(){
+    public virtual void ExitState()
+    {
         stateExitEvent.Invoke();
     }
 }

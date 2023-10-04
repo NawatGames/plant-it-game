@@ -1,15 +1,19 @@
-﻿using UnityEngine;
+﻿using Handler;
+using UnityEngine;
 using UnityEngine.Events;
 
-public class TileReference : MonoBehaviour
+namespace Handler
 {
-    [SerializeField] private TileHandler handler;
-    public UnityEvent<TileHandler> handlerUpdateEvent;
-    
-    public void SetHandler(TileHandler newHandler)
+    public class TileReference : MonoBehaviour
     {
-        if(handlerUpdateEvent == null) return;
-        handlerUpdateEvent.Invoke(newHandler);
-        handler = newHandler;
-    }   
+        [SerializeField] private TileHandler handler;
+        public UnityEvent<TileHandler> handlerUpdateEvent;
+
+        public void SetHandler(TileHandler newHandler)
+        {
+            if (handlerUpdateEvent == null) return;
+            handlerUpdateEvent.Invoke(newHandler);
+            handler = newHandler;
+        }
+    }
 }

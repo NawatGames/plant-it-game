@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlantReference : MonoBehaviour
+namespace Handler
 {
-    [SerializeField] private PlantHandler handler;
-    public UnityEvent<PlantHandler> handlerUpdateEvent;
 
-    public void SetHandler(PlantHandler newHandler)
+    public class PlantReference : MonoBehaviour
     {
-        if(handlerUpdateEvent == null) return;
-        handlerUpdateEvent.Invoke(newHandler);
-        handler = newHandler;
+        [SerializeField] private PlantHandler handler;
+        public UnityEvent<PlantHandler> handlerUpdateEvent;
+
+        public void SetHandler(PlantHandler newHandler)
+        {
+            if (handlerUpdateEvent == null) return;
+            handlerUpdateEvent.Invoke(newHandler);
+            handler = newHandler;
+        }
     }
 }
