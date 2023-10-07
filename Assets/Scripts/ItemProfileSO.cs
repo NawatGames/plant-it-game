@@ -10,7 +10,7 @@ public class ItemProfileSO : ScriptableObject
     public UnityEvent itemSelectEvent, itemUnselectEvent;
 
     public virtual bool CanInteractWith(TileHandler selectedTile)
-    {
+    {   
         return false;
     }
     public virtual void InteractWith(TileHandler selectedTile)
