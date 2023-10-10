@@ -12,9 +12,11 @@ namespace Tile.Inventory
     {
         [SerializeField] private InventoryTileClicker tileClicker;
         [SerializeField] private TileHandler tileHandler;
+        private TilePlantChecker plant;
         private ItemSelectionManager _selectionManager;
         public UnityEvent itemUseSuccess;
         public UnityEvent itemUseFail;
+        
         private void Awake()
         {
             _selectionManager = GameObject.FindFirstObjectByType<ItemSelectionManager>();
@@ -29,7 +31,7 @@ namespace Tile.Inventory
         }
 
         private void OnTileClicked()
-        {
+        {   
             ItemProfileSO profile = _selectionManager.GetState();
             if (profile.CanInteractWith(tileHandler))
             {

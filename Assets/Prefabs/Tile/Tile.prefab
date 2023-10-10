@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8792289746495073597}
   - component: {fileID: 8268497262321721789}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 7338108433998143897}
   - component: {fileID: 2527757349755649435}
   - component: {fileID: 5368697656624087133}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nivel 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2254700501082877153}
   - component: {fileID: 8801554446128004751}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nitrogen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1962158218237647092}
   - component: {fileID: 2879675477652825790}
   - component: {fileID: 5401324663328298935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TileDirtStateMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 6241460669358622115}
   - component: {fileID: 993948415813650094}
   - component: {fileID: 8308248102423679524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nivel 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7717063769058288832}
   - component: {fileID: 4277495241426857855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Zinc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6689114243406022143}
   - component: {fileID: 7532588728189517660}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Magnesium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7015505977410066096}
   - component: {fileID: 2893472686657721861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HoverController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 5636761523600724432}
   - component: {fileID: 3711680384619058344}
   - component: {fileID: 9189937747989025094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nivel 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 4289472843742563612}
   - component: {fileID: 5815952154906807057}
   - component: {fileID: 4570800063753555019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nivel 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9014826333929903600}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282753467346958332}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StateMachines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3024851764217790102}
   - component: {fileID: 887982589560458491}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PotSpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6242328957198427818}
   - component: {fileID: 1619680635935446642}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Potassium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6564488550646239935}
   - component: {fileID: 1293729908088448182}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Phosphor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952197768852907446}
   - component: {fileID: 5208807810293614717}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SelectedSpriteRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8270384081948840071}
   - component: {fileID: 1416003764288627045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TileNutrients
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9104086591262553426}
   - component: {fileID: 4950557720197495691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Iron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3916173188477741705}
   - component: {fileID: 3432730581100419568}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SelectionController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6279066643901540633}
   - component: {fileID: 2246294763941515972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DirtSpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 2920263338710570078}
   - component: {fileID: 3112300608214947401}
   - component: {fileID: 2315394475890557308}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4571685552038394490}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpriteRenderers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 7901219250665070572}
   - component: {fileID: 5942579690374772087}
   - component: {fileID: 3617191227279712607}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Nivel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8289753643867729576}
   - component: {fileID: 3193684397775419139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HoverSpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,6 +1502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileClicker
       objectReference: {fileID: 0}
+    - target: {fileID: 7698048853153420166, guid: 837c639a8e2196345b8e184bb986d623, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1575,6 +1579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemUser
       objectReference: {fileID: 0}
+    - target: {fileID: 4771478319044401230, guid: 6d1b03e1e82c6144c90f9a09f2729dc4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7158657217874563751, guid: 6d1b03e1e82c6144c90f9a09f2729dc4, type: 3}
       propertyPath: tileClicker
       value: 
@@ -1645,6 +1653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantReference
       objectReference: {fileID: 0}
+    - target: {fileID: 1914248923718380637, guid: 02f36c28a5734994397dd6068a616983, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7276636975722251336, guid: 02f36c28a5734994397dd6068a616983, type: 3}
       propertyPath: handler
       value: 
@@ -1714,6 +1726,10 @@ PrefabInstance:
     - target: {fileID: 2820169735877128858, guid: 6c7528a375e556c4297226072301a2c0, type: 3}
       propertyPath: m_Name
       value: TileHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820169735877128858, guid: 6c7528a375e556c4297226072301a2c0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
