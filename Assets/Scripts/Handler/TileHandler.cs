@@ -1,16 +1,18 @@
-﻿using System;
+using GrowSystem.PlantInteracts;
+using System;
 using InventorySystem;
 using KevinCastejon.MoreAttributes;
 using Tile.Inventory;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class TileHandler : MonoBehaviour
+namespace Handler
 {
-    public InventoryTileClicker tileClicker;
-    public NutrientLocator tileNutrientLocator;
-   
-    
+    public class TileHandler : MonoBehaviour
+    {
+        public InventoryTileClicker tileClicker;
+        public NutrientLocator tileNutrientLocator;
+        public PlantSpawner plantSpawner;
+        public PlantRemover plantRemover;
+    }
 }
-
-
