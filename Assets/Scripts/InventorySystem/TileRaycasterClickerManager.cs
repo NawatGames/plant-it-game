@@ -61,12 +61,11 @@ namespace InventorySystem
             Physics2D.Raycast(cameraMain.ScreenToWorldPoint(mousePosition),
                 Vector2.zero, contactFilter2D, results);
             resultcount += results.Count;
-            Debug.Log("Mouse Position: " + mousePosition);
             Debug.Log("Number of hits: " + results.Count);
             Debug.Log("Total number of hits: " + resultcount);
             
             foreach (RaycastHit2D i in results)
-            {   Debug.Log("TileRaycasterClickerManager: Raycast loop ");
+            {   
                 GameObject target = i.collider.gameObject;
                 TileHandler handler = target.GetComponentInChildren<TileHandler>();
                 
