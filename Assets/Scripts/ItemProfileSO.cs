@@ -12,17 +12,9 @@ public class ItemProfileSO : ScriptableObject
     
 
     public virtual bool CanInteractWith(TileHandler selectedTile)
-    {   
-        int existValue = selectedTile.exist;
-        if(existValue == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-      
+    {
+        return true;
+
     }
     public virtual void InteractWith(TileHandler selectedTile)
     {
