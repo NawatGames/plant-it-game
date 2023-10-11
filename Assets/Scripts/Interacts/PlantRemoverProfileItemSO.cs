@@ -4,10 +4,10 @@ using GrowSystem.PlantInteracts;
 using Handler;
 using UnityEngine;
 
-namespace Interacts 
+namespace Interacts
 {
     public class PlantRemoverProfileItemSO : ItemProfileSO
-    {        
+    {
         [SerializeField] private SeedProfileItemSO plant;
         public override bool CanInteractWith (TileHandler tileHandler)
         {
@@ -16,7 +16,8 @@ namespace Interacts
 
         public override void InteractWith(TileHandler tileHandler)
         {
-            tileHandler.plantRemover.RemovePlant(plant);
+            tileHandler.plantRemover.RemovePlant();
+            
         }
     }
 }

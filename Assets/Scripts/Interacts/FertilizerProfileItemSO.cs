@@ -17,7 +17,7 @@ namespace Interacts
 
         public override void InteractWith(TileHandler tileHandler)
         {
-            tileHandler.plantSpawner.SpawnPlant(plant);
+            tileHandler.plantSpawner.SpawnPlant();
         }
     }
 }
