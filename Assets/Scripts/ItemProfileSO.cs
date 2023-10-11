@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using InventorySystem;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,10 +9,12 @@ public class ItemProfileSO : ScriptableObject
 {
     public GameObject prefab;
     public UnityEvent itemSelectEvent, itemUnselectEvent;
+    
 
     public virtual bool CanInteractWith(TileHandler selectedTile)
     {
-        return false;
+        return true;
+
     }
     public virtual void InteractWith(TileHandler selectedTile)
     {

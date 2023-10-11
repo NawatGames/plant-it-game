@@ -6,7 +6,7 @@ namespace InventorySystem
     {
         // Responsável por selecionar um item
         // State machine para guardar o item/ferramente selecionado
-        private ItemProfileSO currentProfile;
+        [SerializeField] private ItemProfileSO currentProfile;
         public void SetState(ItemProfileSO newProfile)
         {
             if(newProfile == null) return;
