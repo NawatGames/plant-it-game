@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 3191170716922350401}
   - component: {fileID: 4838840571030079105}
   m_Layer: 5
-  m_Name: PopUpSprites
+  m_Name: PopUpInstance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

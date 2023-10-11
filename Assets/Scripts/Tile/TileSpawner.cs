@@ -27,7 +27,7 @@ public class TileSpawner : MonoBehaviour
         Vector3 position = tilemap.CellToWorld((Vector3Int)point);
         GameObject clone = Instantiate(tilePrefab, position, Quaternion.identity);
         clone.transform.parent = root.transform;
-        TileHandler handler = clone.GetComponent<TileHandler>();
+        TileHandler handler = clone.GetComponentInChildren<TileHandler>();
         if(handler == null) throw new Exception("TileHandler não encontrado");
         return handler;
     }

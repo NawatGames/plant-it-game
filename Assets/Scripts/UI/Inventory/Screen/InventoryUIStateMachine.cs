@@ -20,6 +20,22 @@ public class InventoryUIStateMachine : MonoBehaviour
         }
     }
     
+    [ContextMenu("Set to Inventory Scroll")]
+    private void SetToInventoryScroll()
+    {
+        SetState(inventoryScroll);
+    }
+    [ContextMenu("Set to Inventory")]
+    private void SetToInventory()
+    {
+        SetState(inventory);
+    }
+    [ContextMenu("Set to Held Item UI")]
+    private void SetToHeldItemUI()
+    {
+        SetState(heldItemUI);
+    }
+    
     public void SetState(InventoryUIState newState)
     {
         if (currentState != null)

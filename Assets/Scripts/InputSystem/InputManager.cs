@@ -53,7 +53,10 @@ namespace InputSystem
             if (leftButtonChangedEvent == null) return;
 
             InputActionPhase phase = context.phase;
-
+            
+            UnityEngine.Debug.Log("Left button changed: " + phase);
+            
+            
             if (phase == InputActionPhase.Performed)
             {
                 leftButtonChangedEvent.Invoke(true);
