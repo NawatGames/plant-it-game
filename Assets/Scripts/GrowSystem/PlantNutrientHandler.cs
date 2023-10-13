@@ -16,7 +16,7 @@ namespace GrowSystem
     {
         [SerializeField] private NutrientRelation[] nutrients;
         [SerializeField] private TileReference _tileReference;
-        public UnityEvent neededNutrientsChangedEvent;
+        public UnityEvent<bool> neededNutrientsChangedEvent;
         private NutrientLocator _nutrientLocator;
         private bool _hasNeededNutrients = false;
         
@@ -74,7 +74,7 @@ namespace GrowSystem
             if (hasNeededNutrientsFlag != _hasNeededNutrients)
             {
                 _hasNeededNutrients = hasNeededNutrientsFlag;
-                neededNutrientsChangedEvent.Invoke();
+                neededNutrientsChangedEvent.Invoke(_hasNeededNutrients);
             }
         }
     }

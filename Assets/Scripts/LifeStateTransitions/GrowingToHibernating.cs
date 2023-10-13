@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class GrowingToHibernatingTransition : LifeStateTransition
+public class GrowingToHibernating : LifeStateTransition
 {
     [SerializeField] PlantStat sleepinessMeter;
     
@@ -17,7 +17,9 @@ public class GrowingToHibernatingTransition : LifeStateTransition
 
     private void OnSleepinessMeterAmountChanged(float amount)
     {
-        if (amount < 1f) return;
-        lifeStateMachine.ChangeState(hibernating);
+        if (sleepinessMeter.AboveThreshold())
+        {
+            lifeStateMachine.ChangeState(hibernating);
+        }
     }
 }
