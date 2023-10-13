@@ -857,6 +857,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7566586315347463163}
     m_Modifications:
+    - target: {fileID: 374070761210164843, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _sleepinessMeter
+      value: 
+      objectReference: {fileID: 4480951914862181600}
+    - target: {fileID: 374070761210164843, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: lifeStateMachine
+      value: 
+      objectReference: {fileID: 8375094185362271490}
+    - target: {fileID: 374070761210164843, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _plantNutrientHandler
+      value: 
+      objectReference: {fileID: 1432372682788888227}
+    - target: {fileID: 424688877306401459, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _nutrientHandler
+      value: 
+      objectReference: {fileID: 1432372682788888227}
+    - target: {fileID: 424688877306401459, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _sleepinessMeter
+      value: 
+      objectReference: {fileID: 4480951914862181600}
+    - target: {fileID: 424688877306401459, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: lifeStateMachine
+      value: 
+      objectReference: {fileID: 8375094185362271490}
     - target: {fileID: 2085379125318713642, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
       propertyPath: health
       value: 
@@ -881,10 +905,34 @@ PrefabInstance:
       propertyPath: lastGrowingState
       value: 
       objectReference: {fileID: 1995313100786009363}
+    - target: {fileID: 4961318300888015706, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: toState
+      value: 
+      objectReference: {fileID: 204486602322935877}
+    - target: {fileID: 4961318300888015706, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: lifeStateMachine
+      value: 
+      objectReference: {fileID: 8375094185362271490}
+    - target: {fileID: 4961318300888015706, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _plantNutrientHandler
+      value: 
+      objectReference: {fileID: 1432372682788888227}
     - target: {fileID: 5510103228444627485, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
       propertyPath: lastGrowingState
       value: 
       objectReference: {fileID: 1995313100786009363}
+    - target: {fileID: 5643403547102882851, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: toState
+      value: 
+      objectReference: {fileID: 204486602322935877}
+    - target: {fileID: 5643403547102882851, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: lifeStateMachine
+      value: 
+      objectReference: {fileID: 8375094185362271490}
+    - target: {fileID: 5643403547102882851, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+      propertyPath: _plantNutrientHandler
+      value: 
+      objectReference: {fileID: 1432372682788888227}
     - target: {fileID: 6785175889958091367, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
       propertyPath: health
       value: 
@@ -942,6 +990,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+--- !u!114 &204486602322935877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7723377002634430791, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}
+  m_PrefabInstance: {fileID: 7636003859428231426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1caa4fe89ca494e86d39380bd1192f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &493968389989545834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8008073793004273256, guid: df73ad5b5c7b9754ea06f415c21338e4, type: 3}

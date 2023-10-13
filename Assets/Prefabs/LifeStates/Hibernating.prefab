@@ -159,6 +159,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7967190279943747715}
     m_Modifications:
+    - target: {fileID: 2538364595669970015, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: fromState
+      value: 
+      objectReference: {fileID: 7726534735914587875}
     - target: {fileID: 4006072503498619066, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
       propertyPath: m_Name
       value: HibernatingToDying
