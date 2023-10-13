@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 7726534735914587875}
     - target: {fileID: 5984772775111501550, guid: c9dbbbb17ac1ae24dbc7d70e471deee6, type: 3}
       propertyPath: m_Name
-      value: HealthDepleted
+      value: RipeToDecomposed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
