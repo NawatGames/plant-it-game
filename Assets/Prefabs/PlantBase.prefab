@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1589128623156593434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2722001206733816573}
+  - component: {fileID: 1432372682788888227}
+  m_Layer: 0
+  m_Name: Nutrients
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2722001206733816573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589128623156593434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7222242770533357508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1432372682788888227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589128623156593434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2da2d1a6e95401a9e46cb419646e796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nutrients: []
+  _tileReference: {fileID: 0}
+  neededNutrientsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5902825229850176715
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +214,7 @@ MonoBehaviour:
   amountChangedEvent:
     m_PersistentCalls:
       m_Calls: []
+  threshold: 0.5
 --- !u!1 &6470057408164922110
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +292,7 @@ Transform:
   m_Children:
   - {fileID: 1704952739440736742}
   - {fileID: 832647900841901131}
+  - {fileID: 2722001206733816573}
   m_Father: {fileID: 7566586315347463163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6820789233453801985
@@ -346,6 +397,7 @@ MonoBehaviour:
   amountChangedEvent:
     m_PersistentCalls:
       m_Calls: []
+  threshold: 0.5
 --- !u!1 &8619062876892920942
 GameObject:
   m_ObjectHideFlags: 0
