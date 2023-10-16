@@ -1723,6 +1723,10 @@ PrefabInstance:
       propertyPath: tileClicker
       value: 
       objectReference: {fileID: 7391544199168248638}
+    - target: {fileID: 2210357863298739835, guid: 6c7528a375e556c4297226072301a2c0, type: 3}
+      propertyPath: tileNutrientLocator
+      value: 
+      objectReference: {fileID: 1416003764288627045}
     - target: {fileID: 2820169735877128858, guid: 6c7528a375e556c4297226072301a2c0, type: 3}
       propertyPath: m_Name
       value: TileHandler

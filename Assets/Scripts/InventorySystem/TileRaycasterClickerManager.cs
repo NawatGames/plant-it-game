@@ -73,6 +73,7 @@ namespace InventorySystem
                 if (handler != null)
                 {
                     Debug.Log("TileRaycasterClickerManager: TileHandler found");
+                    Debug.Log("Position of tile: " + handler.transform.position);
                     if (handler.tileClicker != null)
                     {
                         handler.tileClicker.Click();
@@ -83,7 +84,6 @@ namespace InventorySystem
                     }
 
                     HandlerSuccessEvent.Invoke();
-                    Debug.Log("TileRaycasterClickerManager: TileHandler found");
                 }
                 else
                 {
