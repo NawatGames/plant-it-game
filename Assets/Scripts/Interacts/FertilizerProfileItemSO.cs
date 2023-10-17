@@ -24,7 +24,7 @@ namespace Interacts
                 Debug.Log("locateNutrient: " + locateNutrient);
                 bool isFull = locateNutrient.IsFull();
                 Debug.Log("locateNutrient.IsFull(): " + isFull);
-                if (isFull == false);
+                if (isFull == false)
                 {
                     flag = true;
                     Debug.Log("flag: " + flag);

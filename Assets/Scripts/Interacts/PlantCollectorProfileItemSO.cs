@@ -8,10 +8,11 @@ namespace Interacts
 {
     public class PlantCollectorProfileItemSO : ItemProfileSO
     {
-        [SerializeField] private SeedProfileItemSO plant;
-
+        [SerializeField] private SeedProfileItemSO plantSeedProfileItemSo;
+        
         public override bool CanInteractWith (TileHandler tileHandler)
         {
+            
             return true;
         }
 

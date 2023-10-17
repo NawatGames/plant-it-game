@@ -14,5 +14,6 @@ namespace Handler
         public NutrientLocator tileNutrientLocator;
         public PlantSpawner plantSpawner;
         public PlantRemover plantRemover;
+        public PlantReference plantReference;
     }   
 }
