@@ -10,7 +10,11 @@ namespace Interacts
     {
         [SerializeField] private SeedProfileItemSO plant;
         public override bool CanInteractWith (TileHandler tileHandler)
-        {
+        {   
+            if(tileHandler.plantReference.GetHandler() == null)
+            {
+                return false;
+            }
             return true;
         }
 

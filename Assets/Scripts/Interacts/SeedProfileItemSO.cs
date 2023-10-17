@@ -13,6 +13,10 @@ namespace Interacts
 
         public override bool CanInteractWith (TileHandler tileHandler)
         {
+            if(tileHandler.plantReference.GetHandler() != null)
+            {
+                return false;
+            }
             return true;
         }
 
