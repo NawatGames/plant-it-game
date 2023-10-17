@@ -24,8 +24,8 @@ namespace Interacts
             {
              
                 
-                var ripeState = tileHandler.plantReference.handler.plantLifeStateMachine.LocateLifeState<PlantLifeState>(plantLifeKey);
-                var currentState = tileHandler.plantReference.handler.plantLifeStateMachine.GetState();
+                var ripeState = tileHandler.plantReference.GetHandler().plantLifeStateMachine.LocateLifeState<PlantLifeState>(plantLifeKey);
+                var currentState = tileHandler.plantReference.GetHandler().plantLifeStateMachine.GetState();
                 if (currentState == ripeState)
                 {
                     flag = true;

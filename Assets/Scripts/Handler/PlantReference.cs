@@ -8,7 +8,7 @@ namespace Handler
 
     public class PlantReference : MonoBehaviour
     {
-        public PlantHandler handler;
+        [SerializeField]private PlantHandler handler;
         public UnityEvent<PlantHandler> handlerUpdateEvent;
 
         public PlantHandler GetHandler()
