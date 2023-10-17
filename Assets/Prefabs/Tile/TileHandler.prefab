@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileClicker: {fileID: 0}
   tileNutrientLocator: {fileID: 0}
+  plantSpawner: {fileID: 0}
+  plantRemover: {fileID: 0}
+  plantReference: {fileID: 7276636975722251336, guid: 02f36c28a5734994397dd6068a616983, type: 3}

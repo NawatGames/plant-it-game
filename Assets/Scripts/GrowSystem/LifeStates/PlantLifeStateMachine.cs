@@ -10,6 +10,7 @@ public class PlantLifeStateMachine : MonoBehaviour
     [SerializeField][ReadOnly] private PlantLifeState currentLifeState;
     [SerializeField][ReadOnlyOnPlay] private PlantLifeState initialState;
     [SerializeField] private PlantLifeState nextState;
+    public PlantLifeState CurrentLifeState => currentLifeState;
 
     public UnityEvent<PlantLifeState, PlantLifeState> stateChangedEvent;
 
@@ -42,7 +43,26 @@ public class PlantLifeStateMachine : MonoBehaviour
 
     public PlantLifeState GetState()
     {
+        Debug.Log("current state: " + currentLifeState);
         return currentLifeState;
+        
+    }
+    
+    public enum PlantLifeStateKey
+    {
+        Growing,
+        Ripe,
+        Decomposed,
+        Dead,
+        Hibernating,
+        Dying
+
+    }
+    
+    public T LocateLifeState<T>(PlantLifeStateKey key)
+    {
+        Debug.Log(key.ToString());
+        return transform.Find(key.ToString()).GetComponent<T>();
     }
 
     [ContextMenu("SetNextState")]
