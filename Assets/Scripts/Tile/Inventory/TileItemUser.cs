@@ -13,7 +13,7 @@ namespace Tile.Inventory
     {
         [SerializeField] private InventoryTileClicker tileClicker;
         [SerializeField] private TileHandler tileHandler;
-        private TilePlantChecker plant;
+        
         private ItemSelectionManager _selectionManager;
         public UnityEvent itemUseSuccess;
         public UnityEvent itemUseFail;

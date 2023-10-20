@@ -8,14 +8,23 @@ namespace Handler
 
     public class PlantReference : MonoBehaviour
     {
-        [SerializeField] private PlantHandler handler;
+        [SerializeField]private PlantHandler handler;
         public UnityEvent<PlantHandler> handlerUpdateEvent;
 
+        public PlantHandler GetHandler()
+        {   
+            return handler;
+        }
+
         public void SetHandler(PlantHandler newHandler)
-        {
-            if (handlerUpdateEvent == null) return;
-            handlerUpdateEvent.Invoke(newHandler);
+        {   
+            if (handlerUpdateEvent != null)
+            {
+                handlerUpdateEvent.Invoke(newHandler);
+            }
             handler = newHandler;
+            Debug.Log("current handler: " + handler);
         }
     }
 }
+    

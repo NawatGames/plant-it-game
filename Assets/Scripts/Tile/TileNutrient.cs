@@ -34,4 +34,30 @@ public class TileNutrient : MonoBehaviour
         var deltaTime = speed * Time.deltaTime;
         SetAmount(currentAmount - deltaTime);
     }
+
+    public bool IsFull()
+    {
+        if(Math.Abs(currentAmount - 1f) < 0.001f)
+        {   
+            Debug.Log("IsFull");
+            return true;
+        }
+        else
+        {   
+            Debug.Log("IsNotFull");
+            return false;
+        }
+    }
+    
+    public bool IsEmpty()
+    {
+        if( currentAmount == 0f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
