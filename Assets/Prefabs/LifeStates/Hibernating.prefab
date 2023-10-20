@@ -64,6 +64,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5638658907677672669, guid: 6cad4cef449a0e0cfb3c5f48291a31b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4712739083770849000}
+    - targetCorrespondingSourceObject: {fileID: 5638658907677672669, guid: 6cad4cef449a0e0cfb3c5f48291a31b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4224670741401059800}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cad4cef449a0e0cfb3c5f48291a31b0, type: 3}
 --- !u!114 &7726534735914587875 stripped
@@ -148,6 +151,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7123439425123448447, guid: 9fe69990998826b1fa4f410df669a24f, type: 3}
   m_PrefabInstance: {fileID: 2575084065220464791}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6752790058939831733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7967190279943747715}
+    m_Modifications:
+    - target: {fileID: 2538364595669970015, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: fromState
+      value: 
+      objectReference: {fileID: 7726534735914587875}
+    - target: {fileID: 4006072503498619066, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_Name
+      value: HibernatingToDying
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+--- !u!4 &4224670741401059800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7428601136578794605, guid: dd481c7fbc703a74db20ddff5c7ad51e, type: 3}
+  m_PrefabInstance: {fileID: 6752790058939831733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7341151034776304041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 7726534735914587875}
     - target: {fileID: 5984772775111501550, guid: c9dbbbb17ac1ae24dbc7d70e471deee6, type: 3}
       propertyPath: m_Name
-      value: HealthDepleted
+      value: HibernatingToDead
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -268,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320281382929397024, guid: 0321307f9340fcbb38edfc7605a95951, type: 3}
       propertyPath: m_Name
-      value: ToRipe
+      value: HibernatingToRIpe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

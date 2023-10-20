@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LifeStateTransitions
 {
-    public class HibernatingToGrowingTransition : LifeStateTransition
+    public class HibernatingToGrowing : LifeStateTransition
     {
         [SerializeField] PlantStat sleepinessMeter;
         
@@ -18,7 +18,9 @@ namespace LifeStateTransitions
         
         private void OnSleepinessMeterAmountChanged(float amount)
         {
-            if (amount > 0) return;
+            // Returns if sleepiness meter is above threshold
+            if (sleepinessMeter.AboveThreshold()) return;
+            // If sleepiness is below threshold, change state to growing
             lifeStateMachine.ChangeState(growing);
         }
     }

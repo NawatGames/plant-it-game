@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SleepingAnimationActivator : MonoBehaviour
+public class StateAnimationActivator : MonoBehaviour
 {
     [SerializeField] private PlantLifeState hibernationState;
     [SerializeField] private GameObject hibernationAnimation;
