@@ -23,7 +23,7 @@ namespace Interacts
             foreach (var plantLifeKey in plantLifeStates)
             {
              
-                
+                    
                 var ripeState = tileHandler.plantReference.GetHandler().plantLifeStateMachine.LocateLifeState<PlantLifeState>(plantLifeKey);
                 var currentState = tileHandler.plantReference.GetHandler().plantLifeStateMachine.GetState();
                 if (currentState == ripeState)

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using GrowSystem.PlantInteracts;
 using Handler;
@@ -9,17 +10,22 @@ namespace Interacts
     [CreateAssetMenu(menuName = "Profile/Blank Fertilizer Item", fileName = "New Blank Fertilizer")]
     public class FertilizerProfileItemSO : ItemProfileSO
     {
-       
+       [Serializable] class NutrientKeyPair
+       {
+           public NutrientLocator.NutrientKey nutrientKey;
+           [Range(0f,1f)] public float amount;
+           
+       }
 
         [SerializeField]
-        private List<NutrientLocator.NutrientKey> nutrients = new List<NutrientLocator.NutrientKey>();
+        private List<NutrientKeyPair> nutrients = new List<NutrientKeyPair>();
         public override bool CanInteractWith (TileHandler tileHandler)
         {   var flag = false;
             
-            foreach (var nutrientKey in nutrients)
+            foreach (var nutrientKeyPair in nutrients)
             {
                 var tileHandlerTileNutrientLocator = tileHandler.tileNutrientLocator;
-                var locateNutrient = tileHandlerTileNutrientLocator.LocateNutrient<TileNutrient>(nutrientKey);
+                var locateNutrient = tileHandlerTileNutrientLocator.LocateNutrient<TileNutrient>(nutrientKeyPair.nutrientKey);
                 Debug.Log("tileHandlerTileNutrientLocator: " + tileHandlerTileNutrientLocator);
                 Debug.Log("locateNutrient: " + locateNutrient);
                 bool isFull = locateNutrient.IsFull();
@@ -28,7 +34,7 @@ namespace Interacts
                 {
                     flag = true;
                     Debug.Log("flag: " + flag);
-                    Debug.Log("nutrientKey: " + nutrientKey);
+                    Debug.Log("nutrientKey: " + nutrientKeyPair.nutrientKey);
                 }
                 
             }

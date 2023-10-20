@@ -11,7 +11,7 @@ namespace Interacts
     public class SeedProfileItemSO : ItemProfileSO
     {
         [SerializeField] private SeedProfileItemSO plant;
-
+        [SerializeField] private GameObject plantPrefab;
         public override bool CanInteractWith (TileHandler tileHandler)
         {
             if(tileHandler.plantReference.GetHandler() != null)
@@ -25,7 +25,7 @@ namespace Interacts
 
         public override void InteractWith(TileHandler tileHandler)
         {
-            // tileHandler.plantSpawner.SpawnPlant();
+           // tileHandler.plantSpawner.SpawnPlant();
         }
     }
 }
