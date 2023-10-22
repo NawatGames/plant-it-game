@@ -11,11 +11,12 @@ public class ItemProfileSO : ScriptableObject
     public GameObject prefab;
     public UnityEvent itemSelectEvent, itemUnselectEvent;
     
+    public string itemId = "";
+    public Sprite inventorySprite;
 
     public virtual bool CanInteractWith(TileHandler selectedTile)
     {
         return true;
-
     }
     public virtual void InteractWith(TileHandler selectedTile)
     {
