@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 260868065941968195, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: initialState
       value: 
-      objectReference: {fileID: 8945616344367371911}
+      objectReference: {fileID: 0}
     - target: {fileID: 260868065941968195, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: lastGrowingState
       value: 
       objectReference: {fileID: 2903893144294070193}
+    - target: {fileID: 3996463018511492230, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: growingStateMachine
+      value: 
+      objectReference: {fileID: 2394288146990204964}
     - target: {fileID: 4076927810822489425, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: stateLeavedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -455,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 7891297576133937299, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: currentAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375094185362271490, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: initialState
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8375094185362271490, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: StateChangedEvent.m_PersistentCalls.m_Calls.Array.size

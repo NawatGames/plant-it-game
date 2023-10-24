@@ -44,8 +44,6 @@ public class PlantGrowingStateMachine : MonoBehaviour
         return currentGrowingState;
     }
     
-    
-    
     public enum PlantGrowingStateKey
     {
         State1,
@@ -60,9 +58,14 @@ public class PlantGrowingStateMachine : MonoBehaviour
         return transform.Find(key.ToString()).GetComponent<T>();
     }
     
-    
-    public void SetNextState(PlantGrowingState newState)
+    public void Set1NextState(PlantGrowingState newState)
     {
-        ChangeState(newState);
+        nextState = newState;
+    }
+   
+    [ContextMenu("SetNextState")]
+    private void SetNextState()
+    {
+        ChangeState(nextState);
     }
 }

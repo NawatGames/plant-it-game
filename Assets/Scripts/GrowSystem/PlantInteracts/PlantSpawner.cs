@@ -14,30 +14,24 @@ namespace GrowSystem.PlantInteracts
     {
         
         [SerializeField] private TileHandler tileHandler;
-        
-        [SerializeField] private Vector3 positon;
+        public GameObject tile;
+        [SerializeField] private Vector3 position;
         public UnityEvent OnPlantSpawned;
         
         private PlantStat Health;
         private PlantStat Sleepiness;
+
+        
         
         
         public PlantHandler SpawnPlant(GameObject plantPrefab)
         {
             Debug.Log("Iniciate SpawnPlant");
             
-            if (transform != null && transform.parent != null)
-            {
-                Vector3 position = tileHandler.transform.parent.position;
-            }
-            else
-            {
-                Debug.LogError("One of the references is null.");
-            }
-
-            
-            Debug.Log("SpawnPlant: " + positon);
-            GameObject plant = Instantiate(plantPrefab, positon, Quaternion.identity);
+           
+            position = transform.position;
+            Debug.Log("SpawnPlant: " + position);
+            GameObject plant = Instantiate(plantPrefab, position, Quaternion.identity);
             Debug.Log("SpawnPlant:Instantiate " + plant);
             PlantHandler plantHandler = plant.GetComponentInChildren<PlantHandler>();
             if(plantHandler == null) Debug.Log("PlantSpawner: PlantHandler não encontrado");
@@ -57,15 +51,19 @@ namespace GrowSystem.PlantInteracts
             
             PlantGrowingStateMachine plantGrowingStateMachine = plantHandler.growingStateMachine;
             PlantGrowingState state1 = plantGrowingStateMachine.LocateLifeState<PlantGrowingState>(PlantGrowingStateMachine.PlantGrowingStateKey.State1);
+            // plantGrowingStateMachine.SetInitialState(state1);
             plantGrowingStateMachine.ChangeState(state1);
-            plantGrowingStateMachine.SetNextState(state1);
+           
+           
+            
             Debug.Log("InjectPlantData: Set "+ plantGrowingStateMachine.GetState());
             
             
             PlantLifeStateMachine plantLifeStateMachine = plantHandler.plantLifeStateMachine;
             PlantLifeState growing = plantLifeStateMachine.LocateLifeState<PlantLifeState>(PlantLifeStateMachine.PlantLifeStateKey.Growing);
+            // plantLifeStateMachine.SetInitialState(growing);
             plantLifeStateMachine.ChangeState(growing);
-            plantLifeStateMachine.SetNextState(growing);
+            plantLifeStateMachine.ChangeState(growing);
             Debug.Log("InjectPlantData: Set growing");
             
          

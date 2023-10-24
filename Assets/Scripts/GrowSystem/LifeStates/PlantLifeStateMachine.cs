@@ -64,11 +64,15 @@ public class PlantLifeStateMachine : MonoBehaviour
         Debug.Log(key.ToString());
         return transform.Find(key.ToString()).GetComponent<T>();
     }
+    
+   
+    
 
    
-    public void SetNextState(PlantLifeState newState)
+    [ContextMenu("SetNextState")]
+    private void SetNextState()
     {
-        ChangeState(newState);
+        ChangeState(nextState);
     }
 
     public void SetState(PlantLifeState hibernatingState)
