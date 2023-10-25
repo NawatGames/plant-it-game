@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cbc8acf94c69eff2e9463b09324402b0, type: 3}
+    - target: {fileID: 5516519612356865183, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6421052296599951889, guid: 75de187f564ee643cbcc9f84761d8bd4, type: 3}
       propertyPath: stateLeavedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0

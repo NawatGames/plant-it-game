@@ -21,20 +21,15 @@ namespace GrowSystem.PlantInteracts
         private PlantStat Health;
         private PlantStat Sleepiness;
         private Vector3 position;
-        void OnEnable()
-        {
-            position = transform.GetComponentInChildren<Transform>().position;
-        }
+        [SerializeField] Transform plantSpawnPoint;
+       
         
         
         
         public PlantHandler SpawnPlant(GameObject plantPrefab)
         {
             Debug.Log("Iniciate SpawnPlant");
-            
-           
-            
-            
+            position = plantSpawnPoint.position;
             Debug.Log("SpawnPlant: " + position);
             GameObject plant = Instantiate(plantPrefab, position, Quaternion.identity);
             Debug.Log("SpawnPlant:Instantiate " + plant);
