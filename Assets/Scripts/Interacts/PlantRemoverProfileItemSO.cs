@@ -23,8 +23,11 @@ namespace Interacts
 
         public override void InteractWith(TileHandler tileHandler)
         {
-            tileHandler.plantRemover.RemovePlant(tileHandler.plantReference);
-            
+            GameObject plant = tileHandler.plantReference.GetHandler().transform.parent.gameObject;
+            Debug.Log("Plant to be removed"+ plant);
+            tileHandler.plantRemover.RemovePlant(plant);
+
+
         }
     }
 }

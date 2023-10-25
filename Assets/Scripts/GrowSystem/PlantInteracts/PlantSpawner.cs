@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 namespace GrowSystem.PlantInteracts
 {
@@ -13,14 +14,17 @@ namespace GrowSystem.PlantInteracts
     public class PlantSpawner : MonoBehaviour
     {
         
-        [SerializeField] private TileHandler tileHandler;
-        public GameObject tile;
-        [SerializeField] private Vector3 position;
+        
+        
         public UnityEvent OnPlantSpawned;
         
         private PlantStat Health;
         private PlantStat Sleepiness;
-
+        private Vector3 position;
+        void OnEnable()
+        {
+            position = transform.GetComponentInChildren<Transform>().position;
+        }
         
         
         
@@ -29,7 +33,8 @@ namespace GrowSystem.PlantInteracts
             Debug.Log("Iniciate SpawnPlant");
             
            
-            position = transform.position;
+            
+            
             Debug.Log("SpawnPlant: " + position);
             GameObject plant = Instantiate(plantPrefab, position, Quaternion.identity);
             Debug.Log("SpawnPlant:Instantiate " + plant);

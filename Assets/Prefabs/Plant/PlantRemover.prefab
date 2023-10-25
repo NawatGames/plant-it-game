@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2820169735877128858
+--- !u!1 &4765429491401226333
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 617532969055767534}
-  - component: {fileID: 2210357863298739835}
+  - component: {fileID: 4549568531132160827}
+  - component: {fileID: 1852727230244108243}
   m_Layer: 0
-  m_Name: TileHandler
+  m_Name: PlantRemover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &617532969055767534
+--- !u!4 &4549568531132160827
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820169735877128858}
+  m_GameObject: {fileID: 4765429491401226333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,20 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2210357863298739835
+--- !u!114 &1852727230244108243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820169735877128858}
+  m_GameObject: {fileID: 4765429491401226333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea465836e2e4f35ab8e70bbe6f52aa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f219cc734fd43089ebb304ef28e6bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileClicker: {fileID: 8366700120085143498, guid: 837c639a8e2196345b8e184bb986d623, type: 3}
-  tileNutrientLocator: {fileID: 8039687211823086764, guid: 1e88cef472603b740b4e7b5ec43b84cf, type: 3}
-  plantSpawner: {fileID: -1680866391386495861, guid: 9b9e2fa833d8ff942891f8cd92521ad1, type: 3}
-  plantRemover: {fileID: 1852727230244108243, guid: 8f194c1ba1e648a4cb9aa31c27be6b5a, type: 3}
-  plantReference: {fileID: 7276636975722251336, guid: 02f36c28a5734994397dd6068a616983, type: 3}
+  PlantRemovedEvent:
+    m_PersistentCalls:
+      m_Calls: []
