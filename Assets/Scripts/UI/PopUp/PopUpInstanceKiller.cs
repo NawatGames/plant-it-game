@@ -40,6 +40,4 @@ public class PopUpInstanceKiller : MonoBehaviour
     {
         _popUpInstance = null;
     }
-
-    
 }

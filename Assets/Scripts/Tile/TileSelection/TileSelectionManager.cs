@@ -48,9 +48,6 @@ public class TileSelectionManager : MonoBehaviour
 
     private void SetTilePopUpHandle(TileSelectionHandler tileSelectionHandler)
     {
-        print(tileSelectionHandler);
-        print(_currentTileSelectionHandler);
-        
         if (tileSelectionHandler == _currentTileSelectionHandler)
         {
             return;
@@ -68,7 +65,6 @@ public class TileSelectionManager : MonoBehaviour
         }
 
         _currentTileSelectionHandler = tileSelectionHandler;
-        print(_currentTileSelectionHandler);
         if (_currentTileSelectionHandler != null)
         {
             _currentTileSelectionHandler.Select();
