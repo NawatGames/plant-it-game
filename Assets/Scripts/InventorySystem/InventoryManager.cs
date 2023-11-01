@@ -27,9 +27,13 @@ namespace InventorySystem
                 Debug.Log("Inventory created item slot");
                 _inventory[item.itemId] = Instantiate(_slotTemplate.gameObject, transform);
                 GetItem(item).SetItem(item);
+                GetItem(item).slotDeletedEvent.AddListener(RemoveItem);
             }
         }
-
+        public T GetComponentInItem<T>(ItemProfileSO item)
+        {
+            return GetItem(item).GetComponent<T>();
+        }
         public InventorySlot GetItem(ItemProfileSO item)
         {
             if (_inventory[item.itemId] != null)
@@ -43,6 +47,14 @@ namespace InventorySystem
         public InventorySlot[] GetInventory()
         {
             return _inventory.Values.Select(item => item.GetComponent<InventorySlot>()).ToArray();
+        }
+
+        public void RemoveItem(InventorySlot item)
+        {
+            if (_inventory[item.itemId] != null)
+            {
+                _inventory.Remove(item.itemId);
+            }
         }
     }
 }

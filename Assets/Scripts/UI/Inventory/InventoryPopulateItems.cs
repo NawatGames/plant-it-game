@@ -15,7 +15,7 @@ namespace UI.Inventory
             foreach (InventorySlot item in _inventoryManager.GetInventory())
             {
                 GameObject slot = Instantiate(_slotDisplayTemplate, _itemHolder.transform);
-                slot.GetComponent<InventoryItemButtonInfoUpdater>().UpdateDisplay(item);
+                slot.GetComponent<InventoryItemButtonInfoUpdater>().SetSlot(item);
             }
         }
 

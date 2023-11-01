@@ -1,3 +1,4 @@
+using System;
 using InventorySystem;
 using UnityEngine;
 using TMPro;
@@ -9,11 +10,22 @@ namespace UI.Inventory
     {
         [SerializeField] private Image _itemSprite;
         [SerializeField] private TMP_Text amountDisplay;
+        public InventorySlot slot;
 
-        public void UpdateDisplay(InventorySlot inventorySlot)
+        private void OnEnable()
         {
-            _itemSprite.sprite = inventorySlot.itemProfile.inventorySprite;
-            amountDisplay.text = inventorySlot.Amount().ToString();
+            UpdateDisplay();
+        }
+
+        public void SetSlot(InventorySlot inventorySlot)
+        {
+            slot = inventorySlot;
+            UpdateDisplay();
+        }
+        public void UpdateDisplay()
+        {
+            _itemSprite.sprite = slot.itemProfile.inventorySprite;
+            amountDisplay.text = slot.Amount().ToString();
         }
     }
 }
