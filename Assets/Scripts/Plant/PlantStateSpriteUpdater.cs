@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace ChangingSpriteTesting
+namespace Plant
+
 {
     [Serializable]
     public class PlantSpriteInfo
@@ -12,7 +12,7 @@ namespace ChangingSpriteTesting
         public Sprite sprite;
     }
 
-    public class PlantStateSpriteUpdater : MonoBehaviour
+    public class PlantSpriteUpdater : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private PlantLifeState plantLifeState;

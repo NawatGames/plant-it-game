@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace GrowSystem
+namespace NewScriptsFolder.Plant
 {
     public class Timer : MonoBehaviour
     {
