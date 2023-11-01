@@ -9,7 +9,7 @@ namespace Interacts
     [CreateAssetMenu(menuName = "Profile/Blank PlantRemover Item", fileName = "New Blank PlantRemover")]
     public class PlantRemoverProfileItemSO : ItemProfileSO
     {
-        [SerializeField] private SeedProfileItemSO plant;
+        
         public override bool CanInteractWith (TileHandler tileHandler)
         {   
             if(tileHandler.plantReference.GetHandler() == null)
@@ -23,8 +23,11 @@ namespace Interacts
 
         public override void InteractWith(TileHandler tileHandler)
         {
-            // tileHandler.plantRemover.RemovePlant();
-            
+            GameObject plant = tileHandler.plantReference.GetHandler().transform.parent.gameObject;
+            Debug.Log("Plant to be removed"+ plant);
+            tileHandler.plantRemover.RemovePlant(plant);
+
+
         }
     }
 }

@@ -12,11 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6528a342d41440eace1ef2bac48215e, type: 3}
   m_Name: SeedProfile
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  itemSelectEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  itemUnselectEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  plant: {fileID: 0}
+  plantPrefab: {fileID: 6141188575024390409, guid: df8e19e823e5648b680983018a802da2, type: 3}

@@ -4,15 +4,20 @@ using Handler;
 using Interacts;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GrowSystem.PlantInteracts
 {
     public class PlantRemover : MonoBehaviour
-    {
-        public void RemovePlant()
+    {   
+        public UnityEvent PlantRemovedEvent;
+      
+        public void RemovePlant(GameObject plantObject)
         {
-            //TODO: dar merge, procurar dentro do prefab do tile como é feita a referencia para a planta que esta plantada dentro do tile
-            //TODO: procurar como é a maneira correta de deletar a planta que está dentro do tile, remove-la e disparar os eventos
+            Destroy(plantObject);
+            PlantRemovedEvent.Invoke();
+            Debug.Log("PlantRemovedEvent invoked");
         }
+       
     }
 }

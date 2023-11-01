@@ -39,12 +39,30 @@ public class PlantGrowingStateMachine : MonoBehaviour
 
         stateChangedEvent.Invoke(newState, oldState);
     }
-    
     public PlantGrowingState GetState()
     {
         return currentGrowingState;
     }
+    
+    public enum PlantGrowingStateKey
+    {
+        State1,
+        State2,
+        State3
 
+    }
+    
+    public T LocateLifeState<T>(PlantGrowingStateKey key)
+    {
+        Debug.Log(key.ToString());
+        return transform.Find(key.ToString()).GetComponent<T>();
+    }
+    
+    public void Set1NextState(PlantGrowingState newState)
+    {
+        nextState = newState;
+    }
+   
     [ContextMenu("SetNextState")]
     private void SetNextState()
     {
