@@ -11,6 +11,8 @@ namespace Handler
     public class PlantHandler : MonoBehaviour
     {
         public PlantLifeStateMachine plantLifeStateMachine;
-        
+        public PlantGrowingStateMachine growingStateMachine;
     }
+
+   
 }
