@@ -18,7 +18,6 @@ namespace InventorySystem
 
         public UnityEvent<System.Type> categoryCreatedEvent;
         public UnityEvent<InventorySlot> slotCreatedEvent;
-        public UnityEvent<InventorySlot> slotUpdatedEvent;
         public UnityEvent<InventorySlot> slotDeletedEvent;
 
         public ItemProfileSO[] test;
@@ -63,7 +62,7 @@ namespace InventorySystem
             }
             return (null,null);
         }
-
+        
         // Creates a item category if it doesn't exist
         private (Dictionary<String,GameObject>,GameObject) CreateCategory(System.Type category)
         {
@@ -109,11 +108,63 @@ namespace InventorySystem
             }
             return slotObj;
         }
-
         // Gets a component from a inventory slot gameObject 
         public T GetComponentInInventoryItem<T>(ItemProfileSO item)
         {
             return GetItemSlot(item).Item2.GetComponent<T>();
+        }
+        /*
+         * UNSAFE FUNCTIONS
+         */
+        public Dictionary<string,GameObject> GetCategoryUnsafe(ItemProfileSO item)
+        {
+            System.Type category = item.GetType();
+            if (_inventory.Keys.Contains(category))
+            {
+                return _inventory[category];
+            }
+            throw new Exception("Category not found");
+        }
+        
+        public Dictionary<string,GameObject> GetCategoryUnsafe(System.Type category)
+        {
+            if (_inventory.Keys.Contains(category))
+            {
+                return _inventory[category];
+            }
+            throw new Exception("Category not found");
+        }       
+        private (Dictionary<String,GameObject>,GameObject) CreateCategoryUnsafe(System.Type category)
+        {
+            if (GetCategory(category) == null)
+            {
+                // Category gameObj
+                GameObject categoryObj = new GameObject(category.Name);
+                categoryObj.transform.SetParent(transform);
+                _categoryGameObjects.Add(category,categoryObj);
+                
+                // Add category dict to inventory
+                Dictionary<string, GameObject> categoryDict = new Dictionary<string, GameObject>();
+                _inventory.Add(category,categoryDict);
+                
+                categoryCreatedEvent.Invoke(category);
+                return (categoryDict,categoryObj);
+            }
+            throw new Exception("Category already exists");
+        }
+        public (InventorySlot,GameObject) GetItemSlotUnsafe(ItemProfileSO item)
+        {
+            Dictionary<string,GameObject> category = GetCategory(item);
+            if (category != null)
+            {
+                if (category.Keys.Contains(item.itemId))
+                {
+                    GameObject slotObj = category[item.itemId];
+                    return (slotObj.GetComponent<InventorySlot>(),slotObj);
+                }
+                throw new Exception("Item not found");
+            }
+            throw new Exception("Category not found");
         }
     }
 }
