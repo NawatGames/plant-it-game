@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GrowSystem.PlantInteracts;
-using Handler;
+using Plant;
+using Tile;
 using UnityEngine;
 
 

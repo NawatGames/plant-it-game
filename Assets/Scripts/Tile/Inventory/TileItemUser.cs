@@ -1,4 +1,5 @@
 ﻿using Handler;
+using Interacts;
 using InventorySystem;
 using UnityEngine;
 using UnityEngine.Events;
