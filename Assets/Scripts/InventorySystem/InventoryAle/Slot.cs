@@ -1,9 +1,10 @@
 ﻿using KevinCastejon.MoreAttributes;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace InventorySystem.InventoryAle
 {
-    public class Slot
+    public class Slot : MonoBehaviour
     {
         [ReadOnly] private int _amount;
         public ItemProfileSO itemProfile;
@@ -16,7 +17,7 @@ namespace InventorySystem.InventoryAle
             return _amount;
         }
         
-        Slot(ItemProfileSO item, int amount = 1)
+        public void Inject(ItemProfileSO item, int amount = 1)
         {
             itemProfile = item;
             itemId = item.itemId;
@@ -72,6 +73,30 @@ namespace InventorySystem.InventoryAle
         public void InvokeSlotDeleted()
         {
             slotDeletedEvent.Invoke(this);
+        }
+
+        [ContextMenu("Add Test")]
+        private void AddTest()
+        {
+            AddAmount(1);
+        }
+        
+        [ContextMenu("Remove Test")]
+        private void RemoveTest()
+        {
+            RemoveAmount(1);
+        }
+        
+        [ContextMenu("Set Test")]
+        private void SetTest()
+        {
+            SetAmount(1);
+        }
+        
+        [ContextMenu("Consume Test")]
+        private void ConsumeTest()
+        {
+            Consume(1);
         }
     }
 }

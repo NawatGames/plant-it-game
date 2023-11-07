@@ -33,11 +33,7 @@ namespace InventorySystem
         public Dictionary<string,GameObject> GetCategory(ItemProfileSO item)
         {
             System.Type category = item.GetType();
-            if (_inventory.Keys.Contains(category))
-            {
-                return _inventory[category];
-            }
-            return null;
+            return GetCategory(category);
         }
         
         public Dictionary<string,GameObject> GetCategory(System.Type category)
