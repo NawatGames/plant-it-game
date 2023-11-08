@@ -4,7 +4,7 @@ using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace InventorySystem.InventoryAle
+namespace InventorySystem.NewInventorySystem
 {
     public class Category : MonoBehaviour
     {
@@ -16,7 +16,7 @@ namespace InventorySystem.InventoryAle
         public UnityEvent<Category> categoryDeletedEvent;
         [SerializeField] private List<Slot> slotList;
 
-        public void Inject(Type categoryType, SlotCreator slotCreator)
+        public void Inject(Type categoryType, SlotCreator slotCreator) //método "construtor"
         {
             this._slotCreator = slotCreator;
             this.categoryType = categoryType;
@@ -65,10 +65,10 @@ namespace InventorySystem.InventoryAle
             }
         }
 
-        private void Update()
-        {
-            Refresh();
-        }
+        //private void Update()
+        //{
+            //Refresh();
+        //}
 
         public void Refresh()
         {

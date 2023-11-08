@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace InventorySystem.InventoryAle
+namespace InventorySystem.NewInventorySystem
 {
     public class Slot : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace InventorySystem.InventoryAle
             return _amount;
         }
         
-        public void Inject(ItemProfileSO item, int amount = 1)
+        public void Inject(ItemProfileSO item, int amount = 1) //método "construtor"
         {
             itemProfile = item;
             itemId = item.itemId;

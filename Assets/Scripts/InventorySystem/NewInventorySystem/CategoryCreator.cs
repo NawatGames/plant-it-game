@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace InventorySystem.InventoryAle
+namespace InventorySystem.NewInventorySystem
 {
     public class CategoryCreator : MonoBehaviour
     {

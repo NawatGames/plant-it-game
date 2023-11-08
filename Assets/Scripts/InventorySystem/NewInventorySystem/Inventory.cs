@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace InventorySystem.InventoryAle
+namespace InventorySystem.NewInventorySystem
 {
     public class Inventory : MonoBehaviour
     {
@@ -28,7 +28,7 @@ namespace InventorySystem.InventoryAle
             return category.GetSlot(item, createIfNull);
         }
 
-            public Category GetCategory(Type categoryType, bool createCategoryIfNull = false)
+        public Category GetCategory(Type categoryType, bool createCategoryIfNull = false)
         {
             if (_categories.ContainsKey(categoryType))
             {

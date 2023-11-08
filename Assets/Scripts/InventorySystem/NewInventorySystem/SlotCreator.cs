@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace InventorySystem.InventoryAle
+namespace InventorySystem.NewInventorySystem
 {
     public class SlotCreator : MonoBehaviour
     {
