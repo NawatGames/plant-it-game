@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Interacts;
+using UnityEngine;
 
 namespace InventorySystem
 {

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Handler;
+using Tile;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
