@@ -9,7 +9,8 @@ namespace InventorySystem.NewInventorySystem
         public SlotCreator slotCreator;
         public Category CreateCategory(Type categoryType)
         {
-            var clone = Instantiate(prefab);
+            var clone = Instantiate(prefab,transform.parent);
+            clone.name = categoryType.Name;
             Category newCategory = clone.GetComponent<Category>();
             newCategory.Inject(categoryType, slotCreator);
             return newCategory;

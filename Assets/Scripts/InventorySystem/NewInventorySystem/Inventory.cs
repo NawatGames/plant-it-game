@@ -50,6 +50,7 @@ namespace InventorySystem.NewInventorySystem
             _categories.Add(categoryType, category);
             category.categoryDeletedEvent.AddListener(CleanCategory);
             categoryCreatedEvent.Invoke(category);
+            
             return category;
         }
 

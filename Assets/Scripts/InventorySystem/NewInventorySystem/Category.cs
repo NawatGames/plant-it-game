@@ -46,6 +46,7 @@ namespace InventorySystem.NewInventorySystem
             _slots.Add(itemProfileSo.itemId, slot);
             slot.slotDeletedEvent.AddListener(CleanSlot);
             slotCreatedEvent.Invoke(slot);
+            
             return slot;
         }
 
