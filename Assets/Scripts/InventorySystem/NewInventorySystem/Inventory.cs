@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Interacts;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
