@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using GrowSystem.PlantInteracts;
-using Handler;
+using Tile;
+using Tile.NutrientSystem;
 using UnityEngine;
 
 namespace Interacts

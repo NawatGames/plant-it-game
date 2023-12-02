@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Interacts;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -49,6 +50,7 @@ namespace InventorySystem.NewInventorySystem
             _categories.Add(categoryType, category);
             category.categoryDeletedEvent.AddListener(CleanCategory);
             categoryCreatedEvent.Invoke(category);
+            
             return category;
         }
 

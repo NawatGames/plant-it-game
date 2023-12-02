@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GrowSystem.LifeStates;
-using GrowSystem.PlantInteracts;
-using Handler;
-using LifeStateTransitions;
-using Unity.Collections;
+﻿using System.Collections.Generic;
+using Plant.LifeSystem.LifeStates;
+using Tile;
 using UnityEngine;
 
 namespace Interacts

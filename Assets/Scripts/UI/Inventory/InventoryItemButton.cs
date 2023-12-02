@@ -1,4 +1,5 @@
 ﻿using System;
+using Interacts;
 using InventorySystem;
 using UnityEngine;
 using UnityEngine.Serialization;
