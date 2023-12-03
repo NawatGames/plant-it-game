@@ -10,7 +10,8 @@ namespace InventorySystem.NewInventorySystem
         public Slot CreateSlot(ItemProfileSO itemProfileSo)
         {
             // Gets reference to item category transform
-            Transform parent = inventory.GetCategory(itemProfileSo.GetType()).gameObject.transform;
+            string categoryName = AttributeExtensions.GetAttributeValue<ItemCategory,string>(itemProfileSo.GetType(), (x => x.CategoryName));
+            Transform parent = inventory.GetCategory(categoryName).gameObject.transform;
             
             var clone = Instantiate(prefab,parent);
             clone.name = itemProfileSo.itemId;

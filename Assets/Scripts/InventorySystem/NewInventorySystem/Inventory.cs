@@ -10,44 +10,49 @@ namespace InventorySystem.NewInventorySystem
 {
     public class Inventory : MonoBehaviour
     {
-        Dictionary<Type, Category> _categories = new Dictionary<Type, Category>();
+        Dictionary<String, Category> _categories = new Dictionary<String, Category>();
         [SerializeField] private CategoryCreator categoryCreator;
         public UnityEvent<Category> categoryCreatedEvent;
         public UnityEvent<Category> categoryCleanedEvent;
 
         public void SetItem(ItemProfileSO item, int quantity = 1)
         {
-            var category = GetCategory(item.GetType(), true);
+
+            string categoryName = AttributeExtensions.GetAttributeValue<ItemCategory,string>(item.GetType(), (x => x.CategoryName));
+            Debug.Log(categoryName);
+            var category = GetCategory(categoryName, true);
             var slot = category.GetSlot(item, true);
             slot.SetAmount(quantity);
         }
 
         public Slot GetSlot(ItemProfileSO item, bool createIfNull = false)
         {
-            var category = GetCategory(item.GetType(), createIfNull);
+            string categoryName = AttributeExtensions.GetAttributeValue<ItemCategory,string>(item.GetType(), (x => x.CategoryName));
+            Debug.Log(categoryName);
+            var category = GetCategory(categoryName, createIfNull);
             if (category == null) return null;
             return category.GetSlot(item, createIfNull);
         }
 
-        public Category GetCategory(Type categoryType, bool createCategoryIfNull = false)
+        public Category GetCategory(string categoryName, bool createCategoryIfNull = false)
         {
-            if (_categories.ContainsKey(categoryType))
+            if (_categories.ContainsKey(categoryName))
             {
-                return _categories[categoryType];
+                return _categories[categoryName];
             }
 
             if (createCategoryIfNull)
             {
-                return CreateCategory(categoryType);
+                return CreateCategory(categoryName);
             }
 
             return null;
         }
 
-        private Category CreateCategory(Type categoryType)
+        private Category CreateCategory(string categoryName)
         {
-            var category = categoryCreator.CreateCategory(categoryType);
-            _categories.Add(categoryType, category);
+            var category = categoryCreator.CreateCategory(categoryName);
+            _categories.Add(categoryName, category);
             category.categoryDeletedEvent.AddListener(CleanCategory);
             categoryCreatedEvent.Invoke(category);
             
@@ -61,11 +66,11 @@ namespace InventorySystem.NewInventorySystem
             Destroy(category.gameObject);
         }
         
-        public void KillCategory(Type categoryType)
+        public void KillCategory(string categoryName)
         {
-            if (_categories.ContainsKey(categoryType))
+            if (_categories.ContainsKey(categoryName))
             {
-                var category = _categories[categoryType];
+                var category = _categories[categoryName];
                 category.InvokeCategoryDeleted();
             }
         }

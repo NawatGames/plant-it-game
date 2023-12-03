@@ -7,12 +7,12 @@ namespace InventorySystem.NewInventorySystem
     {
         public GameObject prefab;
         public SlotCreator slotCreator;
-        public Category CreateCategory(Type categoryType)
+        public Category CreateCategory(string categoryName)
         {
             var clone = Instantiate(prefab,transform.parent);
-            clone.name = categoryType.Name;
+            clone.name = categoryName;
             Category newCategory = clone.GetComponent<Category>();
-            newCategory.Inject(categoryType, slotCreator);
+            newCategory.Inject(categoryName, slotCreator);
             return newCategory;
         }
     }
