@@ -1,10 +1,14 @@
+using System;
 using Tile;
 using UnityEngine;
 using UnityEngine.Events;
+using InventorySystem.NewInventorySystem;
+using UnityEditor;
 
 namespace Interacts
 {
     [CreateAssetMenu(menuName = "Profile/Blank Item", fileName = "New Profile")]
+    [ItemCategory("No assigned category")]
     public class ItemProfileSO : ScriptableObject
     {
         public GameObject prefab;
@@ -22,5 +26,6 @@ namespace Interacts
         {
         
         }
+        
     }
 }

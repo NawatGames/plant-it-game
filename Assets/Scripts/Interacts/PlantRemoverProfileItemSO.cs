@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using InventorySystem.NewInventorySystem;
 using Tile;
 using UnityEngine;
 
 namespace Interacts
 {       
     [CreateAssetMenu(menuName = "Profile/Blank PlantRemover Item", fileName = "New Blank PlantRemover")]
+    [ItemCategory("Tool")]
     public class PlantRemoverProfileItemSO : ItemProfileSO
     {
         

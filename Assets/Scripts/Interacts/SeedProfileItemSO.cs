@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using InventorySystem.NewInventorySystem;
 using Plant;
 using Tile;
 using UnityEngine;
@@ -8,6 +9,7 @@ using UnityEngine;
 namespace Interacts
 {
     [CreateAssetMenu(menuName = "Profile/Blank Seed Item", fileName = "New Blank Seed")]
+    [ItemCategory("Seed")]
     public class SeedProfileItemSO : ItemProfileSO
     {
        

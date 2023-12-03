@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using InventorySystem.NewInventorySystem;
 using Tile;
 using Tile.NutrientSystem;
 using UnityEngine;
@@ -8,6 +9,7 @@ using UnityEngine;
 namespace Interacts
 {
     [CreateAssetMenu(menuName = "Profile/Blank Fertilizer Item", fileName = "New Blank Fertilizer")]
+    [ItemCategory("Fertilizer")]
     public class FertilizerProfileItemSO : ItemProfileSO
     {
        [Serializable] class NutrientKeyPair
