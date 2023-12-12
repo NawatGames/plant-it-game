@@ -1,0 +1,6 @@
+nome do item (primary key),agua,nitrogenio,postassio,fosforo,ferro,zinco,magnesio
+fertilizante de agua,50,0,0,0,0,0,0
+fertilizante de ferro,0,0,0,0,20,0,0
+fertilizante de potassio,0,0,33,0,0,0,0
+fertilizante top,10,10,10,10,10,10,10
+fertilizante deus,100,100,100,100,100,100,100

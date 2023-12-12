@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
-    public class ItemIntrepeter : MonoBehaviour
+    public class FertilizerInterpreter : MonoBehaviour
     {
-        public TextAsset itemDatabase;
-        [SerializeField] private List<Item> items = new List<Item>();
+        public TextAsset fertilizerDatabase;
+        [SerializeField] private List<Fertilizer> items = new List<Fertilizer>();
         private void Awake()
         {
-            var text = itemDatabase.text;
+            var text = fertilizerDatabase.text;
             
             // Splits the CSV into lines
             var lines = text.Split('\n').ToList();
@@ -21,18 +21,18 @@ namespace Database.Interpreters
             lines.RemoveAt(0);
             lines.RemoveAt(lines.Count - 1);
             
-            // Creates an item for each line
+            // Creates a fertilizer item for each line
             foreach (var line in lines)
             {
                 Debug.Log(line);
-                Item item = new Item(line);
+                Fertilizer item = new Fertilizer(line);
                 items.Add(item);
             }
         }
         
-        public Item GetItem(string itemName)
+        public Fertilizer GetItem(string fertilizerName)
         {
-            return items.FirstOrDefault(item => item.itemName == itemName);
+            return items.FirstOrDefault(fertilizer => fertilizer.fertilizerName == fertilizerName);
         }
     }
 }
