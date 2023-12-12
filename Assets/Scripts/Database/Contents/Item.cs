@@ -25,23 +25,31 @@ namespace Database.Contents
             Legendary = 5
         }
         
+        // Database properties
         public string itemName;
         public Categories category;
+        public Rarity itemRarity;
+        // UI properties
         public Texture2D itemTexture;
-        public Rarity itemRarity = Rarity.Common;
-        public int sellPrice = -1;
-        public int buyPrice = -1;
+        // Shop properties
+        public int sellPrice;
+        public int buyPrice;
 
         public Item(string line)
         {
             var segments = line.Split(",");
+            // Database properties
             itemName = segments[0];
-            int rarityInt = 1;
             int categoryInt = 1;
             int.TryParse(segments[1], out categoryInt);
             category = (Categories) categoryInt;
+            int rarityInt = 1;
             int.TryParse(segments[3], out rarityInt);
             itemRarity = (Rarity) rarityInt;
+            // 
+            // ****** Missing itemTexture load *******
+            //
+            // Shop properties
             int.TryParse(segments[4], out sellPrice);
             int.TryParse(segments[5], out buyPrice);
         }
