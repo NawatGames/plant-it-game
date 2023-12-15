@@ -6,11 +6,12 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
+    [Serializable]
     public class CountedDropsInterpreter
     {
         public TextAsset countedDropsDatabase;
         [SerializeField] private List<CountedDrops> items = new List<CountedDrops>();
-        public CountedDropsInterpreter()
+        public void Init()
         {
             var text = countedDropsDatabase.text;
             

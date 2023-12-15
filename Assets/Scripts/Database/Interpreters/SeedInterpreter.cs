@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Database.Contents;
@@ -5,11 +6,12 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
+    [Serializable]
     public class SeedInterpreter
     {
         public TextAsset seedDatabase; // Seed CSV file database
         [SerializeField] private List<Seed> seeds = new List<Seed>();
-        public SeedInterpreter()
+        public void Init()
         {
             string text = seedDatabase.text;
             

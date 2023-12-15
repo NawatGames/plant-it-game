@@ -6,11 +6,12 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
+    [Serializable]
     public class FertilizerInterpreter : MonoBehaviour
     {
         public TextAsset fertilizerDatabase;
         [SerializeField] private List<Fertilizer> items = new List<Fertilizer>();
-        public FertilizerInterpreter()
+        public void Init()
         {
             var text = fertilizerDatabase.text;
             
