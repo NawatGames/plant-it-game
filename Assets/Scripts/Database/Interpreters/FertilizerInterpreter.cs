@@ -10,7 +10,7 @@ namespace Database.Interpreters
     {
         public TextAsset fertilizerDatabase;
         [SerializeField] private List<Fertilizer> items = new List<Fertilizer>();
-        private void Awake()
+        public FertilizerInterpreter()
         {
             var text = fertilizerDatabase.text;
             

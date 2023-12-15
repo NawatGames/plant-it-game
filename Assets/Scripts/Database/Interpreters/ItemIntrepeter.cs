@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
-    public class ItemIntrepeter : MonoBehaviour
+    public class ItemIntrepeter
     {
         public TextAsset itemDatabase;
         [SerializeField] private List<Item> items = new List<Item>();
-        private void Awake()
+        public ItemIntrepeter()
         {
             var text = itemDatabase.text;
             

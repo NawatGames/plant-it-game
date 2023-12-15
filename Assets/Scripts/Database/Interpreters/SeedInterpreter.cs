@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Database.Interpreters
 {
-    public class SeedInterpreter : MonoBehaviour
+    public class SeedInterpreter
     {
         public TextAsset seedDatabase; // Seed CSV file database
         [SerializeField] private List<Seed> seeds = new List<Seed>();
-        private void Awake()
+        public SeedInterpreter()
         {
             string text = seedDatabase.text;
             
