@@ -7,13 +7,11 @@ namespace Factories
 {
     public class ItemUIFactory : MonoBehaviour
     {
-        [SerializeField] private ItemIntrepeter _itemDb;
         [SerializeField] private GameObject _itemUIPrefab;
-        GameObject CreateItemUI(string key, int amount, Transform parent)
+        GameObject CreateItemUI(string key, int amount)
         {
-            Item item = _itemDb.GetItem(key);
-            GameObject itemUI = Instantiate(_itemUIPrefab, parent);
-            itemUI.GetComponent<ItemUIInjector>().Inject(item, amount);
+            GameObject itemUI = Instantiate(_itemUIPrefab);
+            itemUI.GetComponent<ItemUIInjector>().Inject(key, amount);
             return itemUI;
         }
     }
