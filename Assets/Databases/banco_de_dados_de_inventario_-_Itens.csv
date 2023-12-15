@@ -1,0 +1,27 @@
+nome do item (primary key),categoria,sprite,raridade,preco de venda,preço de compra
+fruto de maramão I,5,/imagens/...,2,700,null
+fruto de maramão II,5,/imagens/...,2,1000,null
+fruto de maramão III,5,/imagens/...,2,1500,null
+fruto de trigo I,5,/imagens/...,1,100,null
+fruto de trigo II,5,/imagens/...,1,150,null
+fruto de trigo III,5,/imagens/...,1,200,null
+fruto de cenoura I,5,/imagens/...,1,200,null
+fruto de cenoura II,5,/imagens/...,1,300,null
+fruto de cenoura III,5,/imagens/...,1,400,null
+fertilizante de agua,3,/imagens/...,1,0,10
+fertilizante de ferro,3,/imagens/...,1,10,20
+fertilizante de potassio,3,/imagens/...,1,50,100
+fertilizante deus,3,/imagens/...,5,,null
+fertilizante top,3,/imagens/...,3,250,500
+semente de trigo I,4,/imagens/...,1,0,100
+semente de trigo II,4,/imagens/...,1,0,null
+semente de trigo III,4,/imagens/...,1,0,null
+semente de cenoura I,4,/imagens/...,1,0,100
+semente de cenoura II,4,/imagens/...,1,0,null
+semente de cenoura III,4,/imagens/...,1,0,null
+semente de maramão I,4,/imagens/...,3,0,100
+semente de maramão II,4,/imagens/...,3,0,null
+semente de maramão III,4,/imagens/...,3,0,null
+semente maluca I,4,/imagens/...,5,0,1000
+semente maluca II,4,/imagens/...,5,0,null
+semente maluca III,4,/imagens/...,5,0,null

@@ -1,4 +1,5 @@
-﻿using KevinCastejon.MoreAttributes;
+﻿using Interacts;
+using KevinCastejon.MoreAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor.Search;
+using Interacts;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,15 +11,15 @@ namespace InventorySystem.NewInventorySystem
         Dictionary<String, Slot> _slots = new Dictionary<string, Slot>();
         public UnityEvent<Slot> slotCreatedEvent;
         public UnityEvent<Slot> slotCleanedEvent;
-        public Type categoryType;
+        public string categoryType;
         private SlotCreator _slotCreator;
         public UnityEvent<Category> categoryDeletedEvent;
         [SerializeField] private List<Slot> slotList;
 
-        public void Inject(Type categoryType, SlotCreator slotCreator) //método "construtor"
+        public void Inject(string categoryName, SlotCreator slotCreator) //método "construtor"
         {
             this._slotCreator = slotCreator;
-            this.categoryType = categoryType;
+            this.categoryType = categoryName;
             slotCreatedEvent = new UnityEvent<Slot>();
             slotCleanedEvent = new UnityEvent<Slot>();
         }
@@ -45,6 +45,7 @@ namespace InventorySystem.NewInventorySystem
             _slots.Add(itemProfileSo.itemId, slot);
             slot.slotDeletedEvent.AddListener(CleanSlot);
             slotCreatedEvent.Invoke(slot);
+            
             return slot;
         }
 

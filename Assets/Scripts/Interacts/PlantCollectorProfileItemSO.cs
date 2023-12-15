@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using InventorySystem.NewInventorySystem;
 using Plant.LifeSystem.LifeStates;
 using Tile;
 using UnityEngine;
@@ -7,6 +8,7 @@ namespace Interacts
 {
     
     [CreateAssetMenu(menuName = "Profile/Blank PlantCollector Item", fileName = "New Blank PlantCollector")]  
+    [ItemCategory("Tool")]
     public class PlantCollectorProfileItemSO : ItemProfileSO
     {
         [SerializeField] private SeedProfileItemSO plantSeedProfileItemSo;
