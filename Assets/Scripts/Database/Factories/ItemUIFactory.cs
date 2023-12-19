@@ -11,7 +11,7 @@ namespace Factories
         GameObject CreateItemUI(string key, int amount)
         {
             GameObject itemUI = Instantiate(_itemUIPrefab);
-            itemUI.GetComponent<ItemUIInjector>().Inject(key, amount);
+            itemUI.GetComponent<ItemSlotUI>().Inject(key, amount);
             return itemUI;
         }
     }

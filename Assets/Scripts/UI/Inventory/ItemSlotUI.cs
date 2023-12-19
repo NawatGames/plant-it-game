@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace UI.Inventory
 {
-    public class ItemUIInjector : MonoBehaviour
+    public class ItemSlotUI : MonoBehaviour
     {
         [SerializeField] private GameObject injectorsHolder;
         [SerializeField] private RawImage itemImage;
