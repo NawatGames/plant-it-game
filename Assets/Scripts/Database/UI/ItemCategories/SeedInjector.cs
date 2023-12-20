@@ -37,10 +37,10 @@ namespace Database.ItemCategories
                 return;
             }
 
-            _actionPopupController.openPopupEvent.AddListener(OnOpenPopup);
+            _actionPopupController.actionOpenPopupEvent.AddListener(OnOpenPopup);
             _actionPopupController.closePopupEvent.AddListener(OnClosePopup);
-            _infoPopupController.openPopupEvent.AddListener(OnOpenPopup);
-            _infoPopupController.closePopupEvent.AddListener(OnClosePopup);
+            _infoPopupController.infoOpenPopupEvent.AddListener(OnOpenPopup);
+            _infoPopupController.infoClosePopupEvent.AddListener(OnClosePopup);
 
 
             PopupInstance = _actionPopupSpawner.Spawn(_actionpopupPrefab);

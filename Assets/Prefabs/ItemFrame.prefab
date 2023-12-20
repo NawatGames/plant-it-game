@@ -942,6 +942,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloth
       objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1043,6 +1055,18 @@ PrefabInstance:
     - target: {fileID: 3404949827309307209, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Name
       value: Sloth (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
@@ -1146,6 +1170,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloth (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1247,6 +1283,18 @@ PrefabInstance:
     - target: {fileID: 3404949827309307209, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Name
       value: Sloth (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
@@ -1350,6 +1398,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloth (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1452,6 +1512,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloth (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1553,6 +1625,18 @@ PrefabInstance:
     - target: {fileID: 3404949827309307209, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Name
       value: Sloth (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4443208047698464877, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542495748216047080, guid: bacc267469fc7164d94d5fd47a2ba783, type: 3}
       propertyPath: m_Pivot.x
