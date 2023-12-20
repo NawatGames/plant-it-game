@@ -25,6 +25,12 @@ namespace Database.ItemCategories
         public override void Inject(string itemName)
         {
             var seed = DatabaseSingleton.Instance.seedInterpreter.GetSeed(itemName);
+            var item = DatabaseSingleton.Instance.itemInterpreter.GetItem(itemName);
+            if (item == null)
+            {
+                Debug.LogError("Item not found");
+                return;
+            }
             if (seed == null)
             {
                 Debug.LogError("Seed not found");
@@ -38,10 +44,8 @@ namespace Database.ItemCategories
 
 
             PopupInstance = _actionPopupSpawner.Spawn(_actionpopupPrefab);
-            // PopupInstance.GetComponent<SeedActionPopup>().Inject(seed);
+            PopupInstance.GetComponent<SeedActionPopup>().Inject(item, seed);
             
-            //Criar methodo que separe a seed(a string) em cada informação
-            //e depois passar essas informações para o Inject
             
         }
 
@@ -56,4 +60,6 @@ namespace Database.ItemCategories
             Debug.Log("Popup closed");
         }
     }
+
+  
 }

@@ -16,7 +16,7 @@ namespace UI.Inventory
         [SerializeField] private TMP_Text itemAmount;
         public void Inject(string itemName, int amount)
         {
-            Item item = DatabaseSingleton.Instance.itemIntrepeter.GetItem(itemName);
+            Item item = DatabaseSingleton.Instance.itemInterpreter.GetItem(itemName);
             if(item == null)
             {
                 Debug.LogError("Item not found");
