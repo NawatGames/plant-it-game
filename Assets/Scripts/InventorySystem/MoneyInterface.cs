@@ -7,7 +7,7 @@ namespace InventorySystem
     {
         private static string _playerMoneyKey = "playerMoney";
         
-        public static void SetMoney(int amount = 0)
+        public static void SetMoney(float amount = 0f)
         {
             PlayerPrefs.SetFloat(_playerMoneyKey, amount);
         }
@@ -17,7 +17,7 @@ namespace InventorySystem
             return PlayerPrefs.GetFloat(_playerMoneyKey);
         }
         
-        public static void AddMoney(float amount = 0)
+        public static void AddMoney(float amount = 0f)
         {
             float newAmount = GetMoney() + amount;
             PlayerPrefs.SetFloat(_playerMoneyKey, newAmount);
